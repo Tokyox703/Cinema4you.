@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tokyox703.github.io/Cinema4You/sitemap.xml
+
