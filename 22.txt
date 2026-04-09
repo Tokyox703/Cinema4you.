@@ -1,0 +1,10 @@
+موقعك/
+├── index.html          (الصفحة الرئيسية - كل المميزات)
+├── puss-in-boots.html  (صفحة الفيلم 1)
+├── spellbound.html     (صفحة الفيلم 2)
+├── samson.html         (صفحة الفيلم 3)
+├── spongebob.html      (صفحة الفيلم 4)
+├── mooz.html           (صفحة الفيلم 5)
+├── zootopia2.html      (صفحة الفيلم 6)
+├── migration.html      (صفحة الفيلم 7)
+└── smurfs.html         (صفحة الفيلم 8)
