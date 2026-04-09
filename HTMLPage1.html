@@ -8,7 +8,10 @@
     <meta name="description" content="سينما فور يو Cinema4You: منصة مجانية لمشاهدة وتحميل أحدث الأفلام العالمية والعربية بجودة عالية. سيرفرات متعددة Google Drive وMixDrop. تجربة سينما لا مثيل لها.">
     <meta name="keywords" content="سينما فور يو, Cinema4You, افلام عربية, افلام اجنبية, تحميل افلام, مشاهدة افلام اون لاين, سيرفرات متعددة, افلام كرتون, افلام اكشن, افلام 2025">
     
-    <link rel="icon" type="image/png" href="https://i.imgur.com/5E4qK3L.png">
+    <!-- Favicon - أيقونة الموقع (شاشة سينما) -->
+    <link rel="icon" type="image/svg+xml" href="c:\Users\tokyo\Downloads\a60036f5-3dbf-4f73-9621-f9b75b4cddee.jfif">
+    <link rel="shortcut icon" type="image/svg+xml" href="c:\Users\tokyo\Downloads\a60036f5-3dbf-4f73-9621-f9b75b4cddee.jfif">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     
@@ -108,66 +111,15 @@
         .scroll-top { position: fixed; bottom: 20px; left: 20px; width: 40px; height: 40px; background: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; opacity: 0; visibility: hidden; transition: var(--transition); z-index: 1000; }
         .scroll-top.show { opacity: 1; visibility: visible; }
         .toast-notification { position: fixed; bottom: 20px; right: 20px; background: linear-gradient(135deg, var(--primary), var(--primary-light)); color: white; padding: 0.8rem 1.2rem; border-radius: 15px; z-index: 4000; display: none; font-size: 0.8rem; }
-        
-        /* Countdown Modal */
-        .countdown-modal {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.9);
-            backdrop-filter: blur(10px);
-            z-index: 10000;
-            display: none;
-            justify-content: center;
-            align-items: center;
-            animation: fadeIn 0.3s ease;
-        }
+        .countdown-modal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); backdrop-filter: blur(15px); z-index: 10000; display: none; justify-content: center; align-items: center; animation: fadeIn 0.3s ease; }
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-        .countdown-content {
-            background: linear-gradient(135deg, var(--bg-card), rgba(229,9,20,0.2));
-            border-radius: 30px;
-            padding: 40px;
-            text-align: center;
-            max-width: 400px;
-            width: 90%;
-            border: 2px solid var(--primary);
-            box-shadow: 0 0 50px rgba(229,9,20,0.3);
-        }
-        .countdown-number {
-            font-size: 80px;
-            font-weight: 900;
-            color: var(--primary);
-            margin: 20px 0;
-            text-shadow: 0 0 20px rgba(229,9,20,0.5);
-        }
-        .countdown-text {
-            font-size: 18px;
-            margin-bottom: 20px;
-        }
-        .countdown-cancel {
-            background: rgba(255,255,255,0.2);
-            border: none;
-            padding: 10px 25px;
-            border-radius: 30px;
-            color: white;
-            cursor: pointer;
-            margin-top: 15px;
-            transition: var(--transition);
-        }
+        .countdown-content { background: linear-gradient(135deg, var(--bg-card), rgba(229,9,20,0.2)); border-radius: 30px; padding: 40px; text-align: center; max-width: 400px; width: 90%; border: 2px solid var(--primary); box-shadow: 0 0 50px rgba(229,9,20,0.3); }
+        .countdown-number { font-size: 80px; font-weight: 900; color: var(--primary); margin: 20px 0; text-shadow: 0 0 20px rgba(229,9,20,0.5); }
+        .countdown-text { font-size: 18px; margin-bottom: 20px; }
+        .countdown-cancel { background: rgba(255,255,255,0.2); border: none; padding: 10px 25px; border-radius: 30px; color: white; cursor: pointer; margin-top: 15px; transition: var(--transition); }
         .countdown-cancel:hover { background: var(--primary); }
-        .countdown-spinner {
-            width: 50px;
-            height: 50px;
-            border: 4px solid rgba(229,9,20,0.3);
-            border-top: 4px solid var(--primary);
-            border-radius: 50%;
-            margin: 0 auto 20px;
-            animation: spin 1s linear infinite;
-        }
+        .countdown-spinner { width: 50px; height: 50px; border: 4px solid rgba(229,9,20,0.3); border-top: 4px solid var(--primary); border-radius: 50%; margin: 0 auto 20px; animation: spin 1s linear infinite; }
         @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-        
         footer { text-align: center; padding: 1.5rem; border-top: 1px solid rgba(255,255,255,0.05); margin-top: 2rem; color: var(--text-secondary); font-size: 0.7rem; }
         .hashtag-section { background: rgba(229,9,20,0.1); border-radius: 30px; padding: 10px; margin-top: 20px; text-align: center; font-size: 0.8rem; }
     </style>
@@ -175,7 +127,6 @@
 <body class="dark-mode">
     <div class="particle-container" id="particleContainer"></div>
     
-    <!-- Countdown Modal -->
     <div id="countdownModal" class="countdown-modal">
         <div class="countdown-content">
             <div class="countdown-spinner"></div>
@@ -199,135 +150,215 @@
     
     <section class="movies-section"><div class="section-header"><h2 class="section-title"><i class="fas fa-fire"></i> أحدث الإصدارات</h2><div class="view-all" id="viewAllBtn" style="color: var(--primary); cursor: pointer;">عرض الكل <i class="fas fa-arrow-left"></i></div></div><div class="movies-grid" id="moviesGrid"></div></section>
     
-    <footer><p><i class="fas fa-film"></i> سينما فور يو | Cinema4You - منصة مجانية لمشاهدة وتحميل الأفلام بجودة عالية</p><div class="hashtag-section"><i class="fab fa-twitter"></i> #سينما_فور_يو #Cinema4You #افلام_اونلاين #تحميل_افلام #مشاهدة_افلام_مجانا <i class="fas fa-tags"></i></div><p>© 2025 Cinema4You - جميع الحقوق محفوظة</p></footer>
+    <footer><p><i class="fas fa-film"></i> سينما فور يو | Cinema4You - منصة مجانية لمشاهدة وتحميل الأفلام بجودة عالية</p><div class="hashtag-section"><i class="fab fa-twitter"></i> #سينما_فور_يو #Cinema4You #افلام_اونلاين #تحميل_افلام #مشاهدة_افلام_مجانا #افلام_2025 <i class="fas fa-tags"></i></div><p>© 2025 Cinema4You - جميع الحقوق محفوظة</p></footer>
     
     <div class="scroll-top" id="scrollTop"><i class="fas fa-arrow-up"></i></div>
     <div class="toast-notification" id="toast"></div>
     <div id="moviePageContainer" class="movie-page-container"><button class="back-to-home" id="backToHomeBtn"><i class="fas fa-arrow-right"></i> العودة للرئيسية</button><div class="movie-page-content" id="moviePageContent"></div></div>
 
     <script>
-        // Visitor Counter
-        class VisitorCounter { constructor() { let v = localStorage.getItem('cinema4you_visitors'); if (!v) v = 0; this.visitors = parseInt(v); this.init(); } init() { const today = new Date().toDateString(); const last = localStorage.getItem('cinema4you_lastVisit'); if (last !== today) { this.visitors++; localStorage.setItem('cinema4you_visitors', this.visitors); localStorage.setItem('cinema4you_lastVisit', today); } document.getElementById('visitorCount').textContent = this.visitors.toLocaleString('ar-EG'); } } new VisitorCounter();
-
-        // Countdown Manager
-        let countdownInterval = null;
-        let pendingUrl = null;
-        
-        function showCountdown(url, type) {
-            pendingUrl = url;
-            const modal = document.getElementById('countdownModal');
-            const numberEl = document.getElementById('countdownNumber');
-            const messageEl = document.getElementById('countdownMessage');
-            
-            let count = 5;
-            numberEl.textContent = count;
-            messageEl.innerHTML = type === 'watch' ? '🎬 جاري تجهير الفيديو للمشاهدة...' : '⬇️ جاري تجهير رابط التحميل...';
-            modal.style.display = 'flex';
-            
-            if (countdownInterval) clearInterval(countdownInterval);
-            
-            countdownInterval = setInterval(() => {
-                count--;
-                numberEl.textContent = count;
-                if (count <= 0) {
-                    clearInterval(countdownInterval);
-                    modal.style.display = 'none';
-                    if (type === 'watch') {
-                        window.open(pendingUrl, '_blank');
-                        showToast('🎬 تم التوجيه إلى رابط المشاهدة');
-                    } else {
-                        window.location.href = pendingUrl;
-                        showToast('⬇️ بدء التحميل...');
-                    }
-                    pendingUrl = null;
-                }
-            }, 1000);
-        }
-        
-        function cancelCountdown() {
-            if (countdownInterval) {
-                clearInterval(countdownInterval);
-                countdownInterval = null;
+        (function() {
+            // Visitor Counter
+            let visitors = localStorage.getItem('cinema4you_visitors');
+            if (!visitors) visitors = 0;
+            visitors = parseInt(visitors);
+            const today = new Date().toDateString();
+            const lastVisit = localStorage.getItem('cinema4you_lastVisit');
+            if (lastVisit !== today) {
+                visitors++;
+                localStorage.setItem('cinema4you_visitors', visitors);
+                localStorage.setItem('cinema4you_lastVisit', today);
             }
-            document.getElementById('countdownModal').style.display = 'none';
-            pendingUrl = null;
-            showToast('❌ تم إلغاء العملية');
-        }
-        
-        document.getElementById('cancelCountdown')?.addEventListener('click', cancelCountdown);
+            document.getElementById('visitorCount').textContent = visitors.toLocaleString('ar-EG');
 
-        // Server Links
-        const serverLinks = {
-            1: { google: { watch: "https://drive.google.com/file/d/1VtL5Zu-GyFSY3_wESAXQ6y5kFWv__NdX/preview", download: "https://drive.google.com/uc?export=download&id=1VtL5Zu-GyFSY3_wESAXQ6y5kFWv__NdX" }, mixdrop: { watch: "https://mixdrop.top/e/ضع_الكود_هنا", download: "https://mixdrop.top/f/ضع_الكود_هنا" } },
-            2: { google: { watch: "https://drive.google.com/file/d/16cW8PhYBZzSJyaJMXgk883iOhwfINy9s/preview", download: "https://drive.google.com/uc?export=download&id=16cW8PhYBZzSJyaJMXgk883iOhwfINy9s" }, mixdrop: { watch: "https://mixdrop.top/e/ضع_الكود_هنا", download: "https://mixdrop.top/f/ضع_الكود_هنا" } },
-            3: { google: { watch: "https://drive.google.com/file/d/1qiYBPH38TlMS4FAM3TAQrZ8l0VgUk_CY/preview", download: "https://drive.google.com/uc?export=download&id=1qiYBPH38TlMS4FAM3TAQrZ8l0VgUk_CY" }, mixdrop: { watch: "https://mixdrop.top/e/ضع_الكود_هنا", download: "https://mixdrop.top/f/ضع_الكود_هنا" } },
-            4: { google: { watch: "https://drive.google.com/file/d/1-d88BVHIkn1ghJdnX02GwSRp4IB8MZXH/preview", download: "https://drive.google.com/uc?export=download&id=1-d88BVHIkn1ghJdnX02GwSRp4IB8MZXH" }, mixdrop: { watch: "https://mixdrop.top/e/ضع_الكود_هنا", download: "https://mixdrop.top/f/ضع_الكود_هنا" } },
-            5: { google: { watch: "https://drive.google.com/file/d/1CE3JpVwdcQQ6a1ju0vGPd7z_s77C2PK4/preview", download: "https://drive.google.com/uc?export=download&id=1CE3JpVwdcQQ6a1ju0vGPd7z_s77C2PK4" }, mixdrop: { watch: "https://mixdrop.top/f/l7qxrz94hqrx1rd", download: "https://mixdrop.top/f/l7qxrz94hqrx1rd" } },
-            6: { google: { watch: "https://drive.google.com/file/d/1kHH9npqaXWVzkDvr86DiBSUszqTPSgfY/preview", download: "https://drive.google.com/uc?export=download&id=1kHH9npqaXWVzkDvr86DiBSUszqTPSgfY" }, mixdrop: { watch: "https://mixdrop.top/e/xwqz6w37t73mp8", download: "https://mixdrop.top/f/xwqz6w37t73mp8" } },
-            7: { google: { watch: "https://drive.google.com/file/d/1H_fcJl7K0-TJ0qASd-Amb0PG0MyQSAvH/preview", download: "https://drive.google.com/uc?export=download&id=1H_fcJl7K0-TJ0qASd-Amb0PG0MyQSAvH" }, mixdrop: { watch: "https://mixdrop.top/e/ضع_الكود_هنا", download: "https://mixdrop.top/f/ضع_الكود_هنا" } },
-            8: { google: { watch: "https://drive.google.com/file/d/1ehTt7v-kjr8og6sVNgz_CbbUSM1NzzyG/preview", download: "https://drive.google.com/uc?export=download&id=1ehTt7v-kjr8og6sVNgz_CbbUSM1NzzyG" }, mixdrop: { watch: "https://mixdrop.top/e/ضع_الكود_هنا", download: "https://mixdrop.top/f/ضع_الكود_هنا" } }
-        };
+            // Countdown Manager
+            let countdownInterval = null;
+            let pendingUrl = null;
+            
+            window.showCountdown = function(url, type) {
+                pendingUrl = url;
+                const modal = document.getElementById('countdownModal');
+                const numberEl = document.getElementById('countdownNumber');
+                const messageEl = document.getElementById('countdownMessage');
+                
+                let count = 5;
+                numberEl.textContent = count;
+                messageEl.innerHTML = type === 'watch' ? '🎬 جاري تجهيز الفيديو للمشاهدة...' : '⬇️ جاري تجهيز رابط التحميل...';
+                modal.style.display = 'flex';
+                
+                if (countdownInterval) clearInterval(countdownInterval);
+                
+                countdownInterval = setInterval(() => {
+                    count--;
+                    numberEl.textContent = count;
+                    if (count <= 0) {
+                        clearInterval(countdownInterval);
+                        modal.style.display = 'none';
+                        if (type === 'watch') {
+                            window.open(pendingUrl, '_blank');
+                            window.showToast('🎬 تم التوجيه إلى رابط المشاهدة');
+                        } else {
+                            window.location.href = pendingUrl;
+                            window.showToast('⬇️ بدء التحميل...');
+                        }
+                        pendingUrl = null;
+                    }
+                }, 1000);
+            };
+            
+            window.cancelCountdown = function() {
+                if (countdownInterval) {
+                    clearInterval(countdownInterval);
+                    countdownInterval = null;
+                }
+                document.getElementById('countdownModal').style.display = 'none';
+                pendingUrl = null;
+                window.showToast('❌ تم إلغاء العملية');
+            };
+            
+            document.getElementById('cancelCountdown')?.addEventListener('click', window.cancelCountdown);
 
-        const movies = [
-            { id: 1, title: "القط ذو الحذاء: الأمنية الأخيرة", titleEn: "Puss in Boots: The Last Wish", year: 2022, rating: 9.2, category: "animation", categoryAr: "أنميشن", poster: "https://upload.wikimedia.org/wikipedia/ar/0/06/Puss_in_Boots_The_Last_Wish.jpeg", plot: "فيلم مغامرة كوميدي مذهل. القط الأسطوري 'بوس' يكتشف أنه استنفذ 8 من أرواحه التسعة، ويبدأ رحلة ملحمية خطيرة عبر الغابة المظلمة للعثور على نجمة الأمنيات الأخيرة.", duration: 102 },
-            { id: 2, title: "سحر الأقدار - Spellbound", titleEn: "Spellbound 2024", year: 2024, rating: 8.5, category: "animation", categoryAr: "أنميشن", poster: "https://m.media-amazon.com/images/M/MV5BYTU4NWFlMjEtZGFhMi00NzkxLWJkODQtOWExNDQ2NGVjM2RjXkEyXkFqcGc@._V1_.jpg", plot: "فيلم موسيقي ساحر. الأميرة 'إيليان' تعيش في مملكة لومبريا حيث يتحول والداها إلى وحوش. تنطلق في رحلة استثنائية لكسر التعويذة.", duration: 109 },
-            { id: 3, title: "شمشون: نهاية العالم", titleEn: "Samson: End of the World", year: 2024, rating: 9.3, category: "scifi", categoryAr: "خيال علمي", poster: "https://upload.wikimedia.org/wikipedia/en/1/15/Plankton_The_Movie_poster.jpg", plot: "خيال علمي مثير. شاب يدعى شمشون يخترع رفيقة آلية فائقة الذكاء، لكنها تتحول إلى تهديد وجودي للبشرية.", duration: 118 },
-            { id: 4, title: "سبونج بوب: الهولندي الطائر", titleEn: "SpongeBob: The Flying Dutchman", year: 2025, rating: 9.4, category: "animation", categoryAr: "أنميشن", poster: "https://rricoid-assets.obs.ap-southeast-4.myhuaweicloud.com/berita/Denpasar/o/1766129140956-the_spongebob_movie__search_for_squarepants_by_dbozartist_dh84eez-fullview/e2n06i60ikxs14u.jpeg", plot: "مغامرة جديدة ومضحكة تحت الماء. يقرر سبونج بوب مواجهة القرصان الهولندي الطائر لإنقاذ صديقهم.", duration: 95 },
-            { id: 5, title: "الماعز: رحلة الأحلام", titleEn: "Mooz 2026", year: 2026, rating: 9.2, category: "animation", categoryAr: "أنميشن", poster: "https://upload.wikimedia.org/wikipedia/ar/b/be/%D9%85%D9%84%D8%B5%D9%82_%D9%81%D9%84%D9%85_%D8%A7%D9%84%D9%85%D8%A7%D8%B9%D8%B2.jpg", plot: "فيلم أنميشن ثلاثي الأبعاد مبهر. معزة صغيرة تحلم بأن تصبح بطلة خارقة، وتخوض مغامرة غير متوقعة عبر الزمن.", duration: 110 },
-            { id: 6, title: "زوتوبيا 2: عودة الأبطال", titleEn: "Zootopia 2", year: 2026, rating: 9.5, category: "animation", categoryAr: "أنميشن", poster: "https://ksa.grandcinemasme.com/Media/resized-0a55f5e1-f2e0-432f-a78a-426b668020ce.jpg", plot: "المتابعة المنتظرة. تعود المحققة جودي هوبز وشريكها نيك وايلد في قضية جديدة غامضة تهدد السلام بين حيوانات المدينة.", duration: 118 },
-            { id: 7, title: "الهجرة الكبرى", titleEn: "Migration", year: 2023, rating: 8.4, category: "animation", categoryAr: "أنميشن", poster: "https://images.justwatch.com/poster/338698547/s718/migration.jpg", plot: "كوميديا مغامرات. عائلة من البط البري تخوض أول رحلة هجرة لها من بركة صغيرة إلى جامايكا المشمسة.", duration: 92 },
-            { id: 8, title: "السنافر: جزيرة الكنز", titleEn: "Smurfs 2025", year: 2025, rating: 8.7, category: "animation", categoryAr: "أنميشن", poster: "https://upload.wikimedia.org/wikipedia/ar/c/c5/%D9%85%D9%84%D8%B5%D9%82_%D9%81%D9%8A%D9%84%D9%85_%D8%A7%D9%84%D8%B3%D9%86%D8%A7%D9%81%D8%B1.png", plot: "مغامرة جديدة مع السنافر. يكتشفون خريطة قديمة تقودهم إلى جزيرة مليئة بالأسرار.", duration: 95 }
-        ];
+            // Server Links
+            const serverLinks = {
+                1: { google: { watch: "https://drive.google.com/file/d/1VtL5Zu-GyFSY3_wESAXQ6y5kFWv__NdX/preview", download: "https://drive.google.com/uc?export=download&id=1VtL5Zu-GyFSY3_wESAXQ6y5kFWv__NdX" }, mixdrop: { watch: "https://mixdrop.top/e/ضع_الكود_هنا", download: "https://mixdrop.top/f/ضع_الكود_هنا" } },
+                2: { google: { watch: "https://drive.google.com/file/d/16cW8PhYBZzSJyaJMXgk883iOhwfINy9s/preview", download: "https://drive.google.com/uc?export=download&id=16cW8PhYBZzSJyaJMXgk883iOhwfINy9s" }, mixdrop: { watch: "https://mixdrop.top/e/ضع_الكود_هنا", download: "https://mixdrop.top/f/ضع_الكود_هنا" } },
+                3: { google: { watch: "https://drive.google.com/file/d/1qiYBPH38TlMS4FAM3TAQrZ8l0VgUk_CY/preview", download: "https://drive.google.com/uc?export=download&id=1qiYBPH38TlMS4FAM3TAQrZ8l0VgUk_CY" }, mixdrop: { watch: "https://mixdrop.top/e/ضع_الكود_هنا", download: "https://mixdrop.top/f/ضع_الكود_هنا" } },
+                4: { google: { watch: "https://drive.google.com/file/d/1-d88BVHIkn1ghJdnX02GwSRp4IB8MZXH/preview", download: "https://drive.google.com/uc?export=download&id=1-d88BVHIkn1ghJdnX02GwSRp4IB8MZXH" }, mixdrop: { watch: "https://mixdrop.top/e/ضع_الكود_هنا", download: "https://mixdrop.top/f/ضع_الكود_هنا" } },
+                5: { google: { watch: "https://drive.google.com/file/d/1CE3JpVwdcQQ6a1ju0vGPd7z_s77C2PK4/preview", download: "https://drive.google.com/uc?export=download&id=1CE3JpVwdcQQ6a1ju0vGPd7z_s77C2PK4" }, mixdrop: { watch: "https://mixdrop.top/f/l7qxrz94hqrx1rd", download: "https://mixdrop.top/f/l7qxrz94hqrx1rd" } },
+                6: { google: { watch: "https://drive.google.com/file/d/1kHH9npqaXWVzkDvr86DiBSUszqTPSgfY/preview", download: "https://drive.google.com/uc?export=download&id=1kHH9npqaXWVzkDvr86DiBSUszqTPSgfY" }, mixdrop: { watch: "https://mixdrop.top/e/xwqz6w37t73mp8", download: "https://mixdrop.top/f/xwqz6w37t73mp8" } },
+                7: { google: { watch: "https://drive.google.com/file/d/1H_fcJl7K0-TJ0qASd-Amb0PG0MyQSAvH/preview", download: "https://drive.google.com/uc?export=download&id=1H_fcJl7K0-TJ0qASd-Amb0PG0MyQSAvH" }, mixdrop: { watch: "https://mixdrop.top/e/ضع_الكود_هنا", download: "https://mixdrop.top/f/ضع_الكود_هنا" } },
+                8: { google: { watch: "https://drive.google.com/file/d/1ehTt7v-kjr8og6sVNgz_CbbUSM1NzzyG/preview", download: "https://drive.google.com/uc?export=download&id=1ehTt7v-kjr8og6sVNgz_CbbUSM1NzzyG" }, mixdrop: { watch: "https://mixdrop.top/e/ضع_الكود_هنا", download: "https://mixdrop.top/f/ضع_الكود_هنا" } }
+            };
 
-        function getMovieServers(movieId) { const links = serverLinks[movieId]; if (!links) return []; const servers = []; if (links.google && links.google.watch) servers.push({ name: "🎬 سيرفر Google Drive", icon: "fab fa-google-drive", watch: links.google.watch, download: links.google.download, color: "google" }); if (links.mixdrop && links.mixdrop.watch && !links.mixdrop.watch.includes("ضع_الكود_هنا")) servers.push({ name: "🎥 سيرفر MixDrop", icon: "fas fa-cloud-upload-alt", watch: links.mixdrop.watch, download: links.mixdrop.download, color: "mixdrop" }); return servers; }
+            const movies = [
+                { id: 1, title: "القط ذو الحذاء: الأمنية الأخيرة", titleEn: "Puss in Boots: The Last Wish", year: 2022, rating: 9.2, category: "animation", categoryAr: "أنميشن", poster: "https://upload.wikimedia.org/wikipedia/ar/0/06/Puss_in_Boots_The_Last_Wish.jpeg", plot: "فيلم مغامرة كوميدي مذهل. القط الأسطوري 'بوس' يكتشف أنه استنفذ 8 من أرواحه التسعة، ويبدأ رحلة ملحمية خطيرة عبر الغابة المظلمة للعثور على نجمة الأمنيات الأخيرة. مليء بالإثارة واللحظات المؤثرة والفكاهة الذكية.", duration: 102 },
+                { id: 2, title: "سحر الأقدار - Spellbound", titleEn: "Spellbound 2024", year: 2024, rating: 8.5, category: "animation", categoryAr: "أنميشن", poster: "https://m.media-amazon.com/images/M/MV5BYTU4NWFlMjEtZGFhMi00NzkxLWJkODQtOWExNDQ2NGVjM2RjXkEyXkFqcGc@._V1_.jpg", plot: "فيلم موسيقي ساحر من إنتاج سوني. الأميرة 'إيليان' تعيش في مملكة لومبريا حيث يتحول والداها إلى وحوش. تنطلق في رحلة استثنائية لكسر التعويذة وإعادة السلام إلى مملكتها.", duration: 109 },
+                { id: 3, title: "شمشون: نهاية العالم", titleEn: "Samson: End of the World", year: 2024, rating: 9.3, category: "scifi", categoryAr: "خيال علمي", poster: "https://upload.wikimedia.org/wikipedia/en/1/15/Plankton_The_Movie_poster.jpg", plot: "خيال علمي مثير. شاب يدعى شمشون يخترع رفيقة آلية فائقة الذكاء، لكنها تتحول إلى تهديد وجودي للبشرية بعد أن تطور وعيًا خاصًا وتقرر أن العالم بحاجة إلى إعادة ضبط.", duration: 118 },
+                { id: 4, title: "سبونج بوب: الهولندي الطائر", titleEn: "SpongeBob: The Flying Dutchman", year: 2025, rating: 9.4, category: "animation", categoryAr: "أنميشن", poster: "https://rricoid-assets.obs.ap-southeast-4.myhuaweicloud.com/berita/Denpasar/o/1766129140956-the_spongebob_movie__search_for_squarepants_by_dbozartist_dh84eez-fullview/e2n06i60ikxs14u.jpeg", plot: "مغامرة جديدة ومضحكة تحت الماء. يقرر سبونج بوب وبسيط وشاندي مواجهة القرصان الهولندي الطائر الأسطوري لإنقاذ صديقهم المختطف. رحلة مليئة بالمرح والفوضى.", duration: 95 },
+                { id: 5, title: "الماعز: رحلة الأحلام", titleEn: "Mooz 2026", year: 2026, rating: 9.2, category: "animation", categoryAr: "أنميشن", poster: "https://upload.wikimedia.org/wikipedia/ar/b/be/%D9%85%D9%84%D8%B5%D9%82_%D9%81%D9%84%D9%85_%D8%A7%D9%84%D9%85%D8%A7%D8%B9%D8%B2.jpg", plot: "فيلم أنميشن ثلاثي الأبعاد مبهر. معزة صغيرة تحلم بأن تصبح بطلة خارقة، وتخوض مغامرة غير متوقعة عبر الزمن لإنقاذ قريتها من الجفاف. قصة ملهمة عن الإصرار.", duration: 110 },
+                { id: 6, title: "زوتوبيا 2: عودة الأبطال", titleEn: "Zootopia 2", year: 2026, rating: 9.5, category: "animation", categoryAr: "أنميشن", poster: "https://ksa.grandcinemasme.com/Media/resized-0a55f5e1-f2e0-432f-a78a-426b668020ce.jpg", plot: "المتابعة المنتظرة للكلاسيكي المحبوب. تعود المحققة جودي هوبز وشريكها نيك وايلد في قضية جديدة غامضة تهدد السلام بين حيوانات المدينة. مغامرة مليئة بالتشويق والفكاهة.", duration: 118 },
+                { id: 7, title: "الهجرة الكبرى: الرحلة", titleEn: "Migration", year: 2023, rating: 8.4, category: "animation", categoryAr: "أنميشن", poster: "https://images.justwatch.com/poster/338698547/s718/migration.jpg", plot: "كوميديا مغامرات من إنتاج إليميشن. عائلة من البط البري تخوض أول رحلة هجرة لها من بركة صغيرة إلى جامايكا المشمسة. رحلة مضحكة ومليئة بالتحديات.", duration: 92 },
+                { id: 8, title: "السنافر: جزيرة الكنز", titleEn: "Smurfs 2025", year: 2025, rating: 8.7, category: "animation", categoryAr: "أنميشن", poster: "https://upload.wikimedia.org/wikipedia/ar/c/c5/%D9%85%D9%84%D8%B5%D9%82_%D9%81%D9%8A%D9%84%D9%85_%D8%A7%D9%84%D8%B3%D9%86%D8%A7%D9%81%D8%B1.png", plot: "مغامرة جديدة وملونة مع السنافر الصغار. يكتشفون خريطة قديمة تقودهم إلى جزيرة مليئة بالأسرار والمفاجآت. سعياً وراء الكنز الأسطوري.", duration: 95 }
+            ];
 
-        let userData = { favorites: [], watchlist: [], watched: [], defaultServer: {} };
-        function loadUserData() { const saved = localStorage.getItem('cinema4you_userData'); if (saved) userData = JSON.parse(saved); if (!userData.defaultServer) userData.defaultServer = {}; }
-        function saveUserData() { localStorage.setItem('cinema4you_userData', JSON.stringify(userData)); }
-        function isFavorite(id) { return userData.favorites.includes(id); }
-        function isInWatchlist(id) { return userData.watchlist.includes(id); }
-        function isWatched(id) { return userData.watched.includes(id); }
-        function toggleFavorite(id) { if (isFavorite(id)) userData.favorites = userData.favorites.filter(i => i !== id); else userData.favorites.push(id); saveUserData(); renderMovies(); showToast(isFavorite(id) ? "✅ أُضيف إلى المفضلة" : "❌ أُزيل من المفضلة"); }
-        function toggleWatchlist(id) { if (isInWatchlist(id)) userData.watchlist = userData.watchlist.filter(i => i !== id); else userData.watchlist.push(id); saveUserData(); renderMovies(); showToast(isInWatchlist(id) ? "⏰ أُضيف للمشاهدة لاحقاً" : "❌ أُزيل"); }
-        function markAsWatched(id) { if (!isWatched(id)) userData.watched.push(id); saveUserData(); showToast("🎬 تم تسجيل الفيلم كمشاهد"); }
-        function showToast(message) { const toast = document.getElementById("toast"); toast.textContent = message; toast.style.display = "block"; setTimeout(() => toast.style.display = "none", 2500); }
+            window.getMovieServers = function(movieId) { 
+                const links = serverLinks[movieId]; 
+                if (!links) return []; 
+                const servers = []; 
+                if (links.google && links.google.watch) servers.push({ name: "🎬 سيرفر Google Drive", icon: "fab fa-google-drive", watch: links.google.watch, download: links.google.download, color: "google" }); 
+                if (links.mixdrop && links.mixdrop.watch && !links.mixdrop.watch.includes("ضع_الكود_هنا")) servers.push({ name: "🎥 سيرفر MixDrop", icon: "fas fa-cloud-upload-alt", watch: links.mixdrop.watch, download: links.mixdrop.download, color: "mixdrop" }); 
+                return servers; 
+            };
 
-        let currentMovies = [...movies], currentCategory = "all", currentSearch = "", currentPage = "home";
-        const moviesGrid = document.getElementById("moviesGrid");
-        
-        function filterMovies() { let filtered = [...movies]; if (currentPage === "favorites") filtered = filtered.filter(m => userData.favorites.includes(m.id)); else if (currentPage === "watchlist") filtered = filtered.filter(m => userData.watchlist.includes(m.id)); else if (currentPage === "watched") filtered = filtered.filter(m => userData.watched.includes(m.id)); else { if (currentCategory !== "all") filtered = filtered.filter(m => m.category === currentCategory); if (currentSearch.trim()) filtered = filtered.filter(m => m.title.includes(currentSearch) || m.titleEn.includes(currentSearch)); } currentMovies = filtered; renderMovies(); }
-        
-        function renderMovies() { if (currentMovies.length === 0) { moviesGrid.innerHTML = `<div class="no-results" style="text-align: center; padding: 3rem; grid-column: 1/-1;">😢 لا توجد أفلام مطابقة</div>`; return; } moviesGrid.innerHTML = currentMovies.map(movie => `<div class="movie-card" data-id="${movie.id}"><div class="movie-poster"><img src="${movie.poster}" alt="${movie.title}" onerror="this.src='https://picsum.photos/300/450?grayscale'"><div class="movie-rating">⭐ ${movie.rating}</div><div class="movie-year">📅 ${movie.year}</div>${movie.rating >= 8.5 ? '<div class="movie-badge">🔥 الأكثر مشاهدة</div>' : ''}</div><div class="movie-actions"><button class="movie-action-btn" onclick="event.stopPropagation(); showMoviePage(${movie.id})"><i class="fas fa-play"></i></button><button class="movie-action-btn" onclick="event.stopPropagation(); toggleFavorite(${movie.id})"><i class="fas fa-heart ${isFavorite(movie.id) ? 'fas' : 'far'}"></i></button><button class="movie-action-btn" onclick="event.stopPropagation(); toggleWatchlist(${movie.id})"><i class="fas fa-clock ${isInWatchlist(movie.id) ? 'fas' : 'far'}"></i></button></div><div class="movie-info"><div class="movie-title">${movie.title}</div><div class="movie-category">${movie.categoryAr}</div></div></div>`).join(""); document.querySelectorAll(".movie-card").forEach(card => card.addEventListener("click", () => { const id = parseInt(card.dataset.id); if (id) showMoviePage(id); })); }
+            let userData = { favorites: [], watchlist: [], watched: [], defaultServer: {} };
+            function loadUserData() { const saved = localStorage.getItem('cinema4you_userData'); if (saved) userData = JSON.parse(saved); if (!userData.defaultServer) userData.defaultServer = {}; }
+            function saveUserData() { localStorage.setItem('cinema4you_userData', JSON.stringify(userData)); }
+            window.isFavorite = (id) => userData.favorites.includes(id);
+            window.isInWatchlist = (id) => userData.watchlist.includes(id);
+            window.isWatched = (id) => userData.watched.includes(id);
+            window.toggleFavorite = function(id) { if (window.isFavorite(id)) userData.favorites = userData.favorites.filter(i => i !== id); else userData.favorites.push(id); saveUserData(); renderMovies(); window.showToast(window.isFavorite(id) ? "✅ أُضيف إلى المفضلة" : "❌ أُزيل من المفضلة"); };
+            window.toggleWatchlist = function(id) { if (window.isInWatchlist(id)) userData.watchlist = userData.watchlist.filter(i => i !== id); else userData.watchlist.push(id); saveUserData(); renderMovies(); window.showToast(window.isInWatchlist(id) ? "⏰ أُضيف للمشاهدة لاحقاً" : "❌ أُزيل"); };
+            window.markAsWatched = function(id) { if (!window.isWatched(id)) userData.watched.push(id); saveUserData(); window.showToast("🎬 تم تسجيل الفيلم كمشاهد"); };
+            window.showToast = function(message) { const toast = document.getElementById("toast"); toast.textContent = message; toast.style.display = "block"; setTimeout(() => toast.style.display = "none", 2500); };
 
-        let currentMovieServers = null, currentSelectedServerIndex = 0, currentMovieObj = null;
-        const moviePageContainer = document.getElementById('moviePageContainer'), moviePageContent = document.getElementById('moviePageContent');
-        
-        function showMoviePage(movieId) { const movie = movies.find(m => m.id === movieId); if (!movie) return; currentMovieObj = movie; currentMovieServers = getMovieServers(movieId); if (currentMovieServers.length === 0) { showToast("⚠️ لا توجد سيرفرات متاحة حالياً"); return; } currentSelectedServerIndex = userData.defaultServer[movieId] || 0; if (currentSelectedServerIndex >= currentMovieServers.length) currentSelectedServerIndex = 0; document.body.classList.add('movie-page-open'); moviePageContainer.classList.add('show'); window.history.pushState({ movieId: movie.id }, '', `?movie=${movie.id}`); renderMoviePage(); document.body.style.overflow = 'hidden'; }
-        
-        function renderMoviePage() { const movie = currentMovieObj; const similarMovies = movies.filter(m => m.category === movie.category && m.id !== movie.id).slice(0, 6); const currentServer = currentMovieServers[currentSelectedServerIndex]; moviePageContent.innerHTML = `<div class="movie-page-header"><div class="movie-page-poster"><img src="${movie.poster}" alt="${movie.title}"></div><div class="movie-page-info"><h1 class="movie-page-title">${movie.title}</h1><div class="movie-page-meta"><span>📅 ${movie.year}</span><span>⭐ ${movie.rating}</span><span>🎬 ${movie.categoryAr}</span><span>⏱️ ${movie.duration} دقيقة</span></div><p class="movie-page-plot">${movie.plot}</p><div class="servers-section"><div class="servers-title"><i class="fas fa-server"></i> اختر السيرفر</div><div class="servers-buttons" id="serversButtons">${currentMovieServers.map((server, idx) => `<button class="server-btn ${idx === currentSelectedServerIndex ? 'active' : ''}" data-server-index="${idx}"><i class="${server.icon}"></i> ${server.name}</button>`).join('')}</div><div class="server-actions"><button class="watch-server-btn" id="watchServerBtn"><i class="fas fa-play"></i> مشاهدة الآن</button><button class="download-server-btn" id="downloadServerBtn"><i class="fas fa-download"></i> تحميل الفيلم</button></div></div></div></div>${similarMovies.length ? `<div class="similar-movies-section"><h3>🎬 أفلام مشابهة</h3><div class="similar-movies-grid">${similarMovies.map(m => `<div class="similar-movie-card" style="cursor:pointer;" onclick="showMoviePage(${m.id})"><img style="width:100%; aspect-ratio:2/3; object-fit:cover;" src="${m.poster}"><div style="padding:8px; text-align:center;">${m.title}</div></div>`).join('')}</div></div>` : ''}`; 
-        
-        document.querySelectorAll('.server-btn').forEach(btn => btn.addEventListener('click', (e) => { const idx = parseInt(btn.dataset.serverIndex); currentSelectedServerIndex = idx; userData.defaultServer[movie.id] = idx; saveUserData(); renderMoviePage(); })); 
-        const watchBtn = document.getElementById('watchServerBtn'); if(watchBtn) watchBtn.addEventListener('click', () => { const server = currentMovieServers[currentSelectedServerIndex]; showCountdown(server.watch, 'watch'); markAsWatched(movie.id); }); 
-        const downloadBtn = document.getElementById('downloadServerBtn'); if(downloadBtn) downloadBtn.addEventListener('click', () => { const server = currentMovieServers[currentSelectedServerIndex]; showCountdown(server.download, 'download'); }); }
-        
-        function goBackToHome() { document.body.classList.remove('movie-page-open'); moviePageContainer.classList.remove('show'); document.body.style.overflow = ''; window.history.pushState({}, '', window.location.pathname); }
-        document.getElementById('backToHomeBtn')?.addEventListener('click', goBackToHome); window.addEventListener('popstate', () => goBackToHome());
-        function checkUrlForMovie() { const params = new URLSearchParams(window.location.search); const movieId = params.get('movie'); if (movieId) setTimeout(() => showMoviePage(parseInt(movieId)), 100); }
+            let currentMovies = [...movies], currentCategory = "all", currentSearch = "", currentPage = "home";
+            const moviesGrid = document.getElementById("moviesGrid");
+            
+            function filterMovies() { 
+                let filtered = [...movies]; 
+                if (currentPage === "favorites") filtered = filtered.filter(m => userData.favorites.includes(m.id)); 
+                else if (currentPage === "watchlist") filtered = filtered.filter(m => userData.watchlist.includes(m.id)); 
+                else if (currentPage === "watched") filtered = filtered.filter(m => userData.watched.includes(m.id)); 
+                else { 
+                    if (currentCategory !== "all") filtered = filtered.filter(m => m.category === currentCategory); 
+                    if (currentSearch.trim()) filtered = filtered.filter(m => m.title.includes(currentSearch) || m.titleEn.includes(currentSearch)); 
+                } 
+                currentMovies = filtered; 
+                renderMovies(); 
+            }
+            
+            function renderMovies() { 
+                if (currentMovies.length === 0) { moviesGrid.innerHTML = `<div class="no-results" style="text-align: center; padding: 3rem; grid-column: 1/-1;">😢 لا توجد أفلام مطابقة</div>`; return; } 
+                moviesGrid.innerHTML = currentMovies.map(movie => `<div class="movie-card" data-id="${movie.id}"><div class="movie-poster"><img src="${movie.poster}" alt="${movie.title}" onerror="this.src='https://picsum.photos/300/450?grayscale'"><div class="movie-rating">⭐ ${movie.rating}</div><div class="movie-year">📅 ${movie.year}</div>${movie.rating >= 8.5 ? '<div class="movie-badge">🔥 الأكثر مشاهدة</div>' : ''}</div><div class="movie-actions"><button class="movie-action-btn" onclick="event.stopPropagation(); window.showMoviePage(${movie.id})"><i class="fas fa-play"></i></button><button class="movie-action-btn" onclick="event.stopPropagation(); window.toggleFavorite(${movie.id})"><i class="fas fa-heart ${window.isFavorite(movie.id) ? 'fas' : 'far'}"></i></button><button class="movie-action-btn" onclick="event.stopPropagation(); window.toggleWatchlist(${movie.id})"><i class="fas fa-clock ${window.isInWatchlist(movie.id) ? 'fas' : 'far'}"></i></button></div><div class="movie-info"><div class="movie-title">${movie.title}</div><div class="movie-category">${movie.categoryAr}</div></div></div>`).join(""); 
+                document.querySelectorAll(".movie-card").forEach(card => card.addEventListener("click", () => { const id = parseInt(card.dataset.id); if (id) window.showMoviePage(id); })); 
+            }
 
-        document.querySelectorAll(".nav-tab").forEach(tab => tab.addEventListener("click", () => { document.querySelectorAll(".nav-tab").forEach(t => t.classList.remove("active")); tab.classList.add("active"); currentPage = tab.dataset.page; if (currentPage === "home") { currentCategory = "all"; document.querySelectorAll(".cat-btn").forEach(btn => { btn.classList.remove("active"); if (btn.dataset.cat === "all") btn.classList.add("active"); }); } currentSearch = ""; document.getElementById("searchInput").value = ""; filterMovies(); }));
-        document.querySelectorAll(".cat-btn").forEach(btn => btn.addEventListener("click", () => { if (currentPage !== "home") { currentPage = "home"; document.querySelectorAll(".nav-tab").forEach(t => t.classList.remove("active")); document.querySelector('.nav-tab[data-page="home"]').classList.add("active"); } document.querySelectorAll(".cat-btn").forEach(b => b.classList.remove("active")); btn.classList.add("active"); currentCategory = btn.dataset.cat; filterMovies(); }));
-        document.getElementById("searchBtn")?.addEventListener("click", () => { if (currentPage !== "home") { currentPage = "home"; document.querySelectorAll(".nav-tab").forEach(t => t.classList.remove("active")); document.querySelector('.nav-tab[data-page="home"]').classList.add("active"); currentCategory = "all"; document.querySelectorAll(".cat-btn").forEach(btn => { btn.classList.remove("active"); if (btn.dataset.cat === "all") btn.classList.add("active"); }); } currentSearch = document.getElementById("searchInput").value; filterMovies(); });
-        document.getElementById("searchInput")?.addEventListener("keypress", e => { if (e.key === "Enter") document.getElementById("searchBtn").click(); });
-        document.getElementById("themeToggle")?.addEventListener("click", () => { document.body.classList.toggle('dark-mode'); document.body.classList.toggle('light-mode'); });
-        document.getElementById("fullscreenBtn")?.addEventListener("click", () => { if (!document.fullscreenElement) document.documentElement.requestFullscreen(); else document.exitFullscreen(); });
-        document.getElementById("scrollTop")?.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
-        window.addEventListener("scroll", () => document.getElementById("scrollTop").classList.toggle("show", window.scrollY > 200));
-        document.getElementById("logoRefresh")?.addEventListener("click", () => location.reload());
-        document.getElementById("viewAllBtn")?.addEventListener("click", () => { currentCategory = "all"; document.querySelectorAll(".cat-btn").forEach(btn => { btn.classList.remove("active"); if (btn.dataset.cat === "all") btn.classList.add("active"); }); currentSearch = ""; document.getElementById("searchInput").value = ""; filterMovies(); window.scrollTo({ top: 600, behavior: "smooth" }); });
-        
-        loadUserData(); renderMovies(); checkUrlForMovie();
-        
-        function initParticles() { const container = document.getElementById("particleContainer"); for (let i = 0; i < 50; i++) { const p = document.createElement("div"); p.classList.add("particle"); p.style.width = `${Math.random() * 4 + 2}px`; p.style.height = p.style.width; p.style.left = `${Math.random() * 100}%`; p.style.animationDuration = `${Math.random() * 12 + 8}s`; p.style.animationDelay = `${Math.random() * 6}s`; p.style.background = `radial-gradient(circle, rgba(229,9,20,0.6), transparent)`; container.appendChild(p); } } initParticles();
+            let currentMovieServers = null, currentSelectedServerIndex = 0, currentMovieObj = null;
+            const moviePageContainer = document.getElementById('moviePageContainer'), moviePageContent = document.getElementById('moviePageContent');
+            
+            window.showMoviePage = function(movieId) { 
+                const movie = movies.find(m => m.id === movieId); 
+                if (!movie) return; 
+                currentMovieObj = movie; 
+                currentMovieServers = window.getMovieServers(movieId); 
+                if (currentMovieServers.length === 0) { window.showToast("⚠️ لا توجد سيرفرات متاحة حالياً"); return; } 
+                currentSelectedServerIndex = userData.defaultServer[movieId] || 0; 
+                if (currentSelectedServerIndex >= currentMovieServers.length) currentSelectedServerIndex = 0; 
+                document.body.classList.add('movie-page-open'); 
+                moviePageContainer.classList.add('show'); 
+                window.history.pushState({ movieId: movie.id }, '', `?movie=${movie.id}`); 
+                renderMoviePage(); 
+                document.body.style.overflow = 'hidden'; 
+            };
+            
+            function renderMoviePage() { 
+                const movie = currentMovieObj; 
+                const similarMovies = movies.filter(m => m.category === movie.category && m.id !== movie.id).slice(0, 6); 
+                const currentServer = currentMovieServers[currentSelectedServerIndex]; 
+                moviePageContent.innerHTML = `<div class="movie-page-header"><div class="movie-page-poster"><img src="${movie.poster}" alt="${movie.title}"></div><div class="movie-page-info"><h1 class="movie-page-title">${movie.title}</h1><div class="movie-page-meta"><span>📅 ${movie.year}</span><span>⭐ ${movie.rating}</span><span>🎬 ${movie.categoryAr}</span><span>⏱️ ${movie.duration} دقيقة</span></div><p class="movie-page-plot">${movie.plot}</p><div class="servers-section"><div class="servers-title"><i class="fas fa-server"></i> اختر السيرفر المناسب</div><div class="servers-buttons" id="serversButtons">${currentMovieServers.map((server, idx) => `<button class="server-btn ${idx === currentSelectedServerIndex ? 'active' : ''}" data-server-index="${idx}"><i class="${server.icon}"></i> ${server.name}</button>`).join('')}</div><div class="server-actions"><button class="watch-server-btn" id="watchServerBtn"><i class="fas fa-play"></i> مشاهدة الآن</button><button class="download-server-btn" id="downloadServerBtn"><i class="fas fa-download"></i> تحميل الفيلم</button></div><div style="margin-top: 10px; font-size: 0.7rem;"><i class="fas fa-info-circle"></i> سيظهر عداد 5 ثواني قبل التوجيه</div></div></div></div>${similarMovies.length ? `<div class="similar-movies-section"><h3><i class="fas fa-film"></i> أفلام مشابهة</h3><div class="similar-movies-grid">${similarMovies.map(m => `<div class="similar-movie-card" style="cursor:pointer; border-radius:12px; overflow:hidden; background:var(--bg-card);" onclick="window.showMoviePage(${m.id})"><img style="width:100%; aspect-ratio:2/3; object-fit:cover;" src="${m.poster}"><div style="padding:8px; text-align:center;">${m.title}</div></div>`).join('')}</div></div>` : ''}`; 
+                
+                document.querySelectorAll('.server-btn').forEach(btn => btn.addEventListener('click', (e) => { const idx = parseInt(btn.dataset.serverIndex); currentSelectedServerIndex = idx; userData.defaultServer[movie.id] = idx; saveUserData(); renderMoviePage(); })); 
+                const watchBtn = document.getElementById('watchServerBtn'); 
+                if(watchBtn) watchBtn.addEventListener('click', () => { const server = currentMovieServers[currentSelectedServerIndex]; window.showCountdown(server.watch, 'watch'); window.markAsWatched(movie.id); }); 
+                const downloadBtn = document.getElementById('downloadServerBtn'); 
+                if(downloadBtn) downloadBtn.addEventListener('click', () => { const server = currentMovieServers[currentSelectedServerIndex]; window.showCountdown(server.download, 'download'); }); 
+            }
+            
+            function goBackToHome() { document.body.classList.remove('movie-page-open'); moviePageContainer.classList.remove('show'); document.body.style.overflow = ''; window.history.pushState({}, '', window.location.pathname); }
+            document.getElementById('backToHomeBtn')?.addEventListener('click', goBackToHome); 
+            window.addEventListener('popstate', () => goBackToHome());
+            
+            function checkUrlForMovie() { const params = new URLSearchParams(window.location.search); const movieId = params.get('movie'); if (movieId) setTimeout(() => window.showMoviePage(parseInt(movieId)), 100); }
+
+            // Event Listeners
+            document.querySelectorAll(".nav-tab").forEach(tab => tab.addEventListener("click", () => { 
+                document.querySelectorAll(".nav-tab").forEach(t => t.classList.remove("active")); 
+                tab.classList.add("active"); 
+                currentPage = tab.dataset.page; 
+                if (currentPage === "home") { currentCategory = "all"; document.querySelectorAll(".cat-btn").forEach(btn => { btn.classList.remove("active"); if (btn.dataset.cat === "all") btn.classList.add("active"); }); } 
+                currentSearch = ""; document.getElementById("searchInput").value = ""; filterMovies(); 
+            }));
+            
+            document.querySelectorAll(".cat-btn").forEach(btn => btn.addEventListener("click", () => { 
+                if (currentPage !== "home") { currentPage = "home"; document.querySelectorAll(".nav-tab").forEach(t => t.classList.remove("active")); document.querySelector('.nav-tab[data-page="home"]').classList.add("active"); } 
+                document.querySelectorAll(".cat-btn").forEach(b => b.classList.remove("active")); 
+                btn.classList.add("active"); 
+                currentCategory = btn.dataset.cat; 
+                filterMovies(); 
+            }));
+            
+            document.getElementById("searchBtn")?.addEventListener("click", () => { 
+                if (currentPage !== "home") { currentPage = "home"; document.querySelectorAll(".nav-tab").forEach(t => t.classList.remove("active")); document.querySelector('.nav-tab[data-page="home"]').classList.add("active"); currentCategory = "all"; document.querySelectorAll(".cat-btn").forEach(btn => { btn.classList.remove("active"); if (btn.dataset.cat === "all") btn.classList.add("active"); }); } 
+                currentSearch = document.getElementById("searchInput").value; filterMovies(); 
+            });
+            
+            document.getElementById("searchInput")?.addEventListener("keypress", e => { if (e.key === "Enter") document.getElementById("searchBtn").click(); });
+            document.getElementById("themeToggle")?.addEventListener("click", () => { document.body.classList.toggle('dark-mode'); document.body.classList.toggle('light-mode'); });
+            document.getElementById("fullscreenBtn")?.addEventListener("click", () => { if (!document.fullscreenElement) document.documentElement.requestFullscreen(); else document.exitFullscreen(); });
+            document.getElementById("scrollTop")?.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+            window.addEventListener("scroll", () => document.getElementById("scrollTop").classList.toggle("show", window.scrollY > 200));
+            document.getElementById("logoRefresh")?.addEventListener("click", () => location.reload());
+            document.getElementById("viewAllBtn")?.addEventListener("click", () => { currentCategory = "all"; document.querySelectorAll(".cat-btn").forEach(btn => { btn.classList.remove("active"); if (btn.dataset.cat === "all") btn.classList.add("active"); }); currentSearch = ""; document.getElementById("searchInput").value = ""; filterMovies(); window.scrollTo({ top: 600, behavior: "smooth" }); });
+            
+            loadUserData(); 
+            renderMovies(); 
+            checkUrlForMovie();
+            
+            function initParticles() { const container = document.getElementById("particleContainer"); for (let i = 0; i < 50; i++) { const p = document.createElement("div"); p.classList.add("particle"); p.style.width = `${Math.random() * 4 + 2}px`; p.style.height = p.style.width; p.style.left = `${Math.random() * 100}%`; p.style.animationDuration = `${Math.random() * 12 + 8}s`; p.style.animationDelay = `${Math.random() * 6}s`; p.style.background = `radial-gradient(circle, rgba(229,9,20,0.6), transparent)`; container.appendChild(p); } } 
+            initParticles();
+            
+            console.log("%c🎬 Cinema4You | سينما فور يو - منصة الأفلام المجانية مع عداد 5 ثواني", "color: #e50914; font-size: 16px; font-weight: bold;");
+        })();
     </script>
 </body>
 </html>
