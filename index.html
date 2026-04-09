@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, viewport-fit=cover">
+    
+    <title>سينما فور يو | Cinema4You - أكبر منصة لمشاهدة وتحميل الأفلام مجاناً</title>
+    <meta name="description" content="سينما فور يو Cinema4You: منصة مجانية لمشاهدة وتحميل أحدث الأفلام العالمية والعربية بجودة عالية. سيرفرات متعددة Google Drive وMixDrop. تجربة سينما لا مثيل لها.">
+    <meta name="keywords" content="سينما فور يو, Cinema4You, افلام عربية, افلام اجنبية, تحميل افلام, مشاهدة افلام اون لاين, سيرفرات متعددة, افلام كرتون, افلام اكشن, افلام 2025">
+    
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23e50914'/%3E%3Cpath fill='white' d='M30,30 L70,30 L70,70 L30,70 Z M40,40 L60,40 L60,60 L40,60 Z'/%3E%3C/svg%3E">
+    <link rel="shortcut icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23e50914'/%3E%3Cpath fill='white' d='M30,30 L70,30 L70,70 L30,70 Z M40,40 L60,40 L60,60 L40,60 Z'/%3E%3C/svg%3E">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #e50914;
+            --primary-dark: #b20710;
+            --primary-light: #ff6b6b;
+            --secondary: #ffd700;
+            --mixdrop: #ff8c00;
+            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            --shadow-xl: 0 16px 64px rgba(0,0,0,0.4);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Cairo', 'Tajawal', sans-serif; overflow-x: hidden; transition: var(--transition); min-height: 100vh; }
+        body.dark-mode { --bg-primary: #050510; --bg-secondary: #0a0a2a; --bg-card: rgba(20,20,40,0.85); --text-primary: #ffffff; --text-secondary: rgba(255,255,255,0.7); background: var(--bg-primary); color: var(--text-primary); }
+        body.light-mode { --bg-primary: linear-gradient(135deg, #fef9e6 0%, #fff5e0 50%, #fff0e0 100%); --bg-secondary: #ffffff; --bg-card: rgba(255,255,245,0.95); --text-primary: #1a1a2e; --text-secondary: #4a4a5a; background: var(--bg-primary); color: var(--text-primary); }
+        body.light-mode .movie-card { background: white; box-shadow: 0 8px 20px rgba(0,0,0,0.08); border: 1px solid rgba(229,9,20,0.15); }
+        body.light-mode .cat-btn { background: white; border-color: #e0e0e0; color: #333; }
+        body.light-mode .cat-btn:hover, body.light-mode .cat-btn.active { background: var(--primary); color: white; }
+        .particle-container { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; overflow: hidden; pointer-events: none; }
+        .particle { position: absolute; border-radius: 50%; pointer-events: none; animation: floatParticle linear infinite; }
+        @keyframes floatParticle { 0% { transform: translateY(100vh) rotate(0deg); opacity: 0; } 10% { opacity: 0.8; } 90% { opacity: 0.8; } 100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; } }
+        header { background: rgba(5, 5, 20, 0.85); backdrop-filter: blur(20px); padding: 0.8rem 1rem; position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid rgba(229,9,20,0.3); }
+        body.light-mode header { background: rgba(255, 245, 235, 0.95); }
+        .header-content { max-width: 1600px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.8rem; }
+        .logo { font-size: 1.3rem; font-weight: 900; cursor: pointer; display: flex; align-items: center; gap: 0.5rem; }
+        @media (min-width: 768px) { .logo { font-size: 1.6rem; } }
+        .logo i { color: var(--primary); font-size: 1.5rem; animation: logoPulse 2s infinite; }
+        @keyframes logoPulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
+        .logo span { background: linear-gradient(135deg, #fff, var(--primary), var(--primary-light)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+        .search-wrapper { position: relative; flex: 1; min-width: 150px; max-width: 350px; }
+        @media (max-width: 768px) { .search-wrapper { order: 3; max-width: 100%; width: 100%; } }
+        .search-box { display: flex; background: rgba(255,255,255,0.08); border-radius: 50px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); }
+        .search-box input { padding: 0.6rem 1rem; border: none; background: transparent; color: var(--text-primary); width: 100%; outline: none; font-size: 0.85rem; }
+        .search-box button { padding: 0.6rem 1.2rem; border: none; background: var(--primary); color: white; cursor: pointer; }
+        .nav-tabs { display: flex; gap: 0.3rem; background: rgba(255,255,255,0.05); padding: 0.3rem; border-radius: 50px; flex-wrap: wrap; }
+        @media (max-width: 768px) { .nav-tabs { order: 4; width: 100%; justify-content: center; } }
+        .nav-tab { padding: 0.4rem 0.8rem; border: none; background: transparent; color: var(--text-primary); cursor: pointer; border-radius: 40px; transition: var(--transition); font-size: 0.75rem; }
+        .nav-tab:hover, .nav-tab.active { background: var(--primary); color: white; }
+        .action-buttons { display: flex; gap: 0.4rem; align-items: center; }
+        .icon-btn { width: 38px; height: 38px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; cursor: pointer; transition: var(--transition); }
+        .icon-btn:hover { background: var(--primary); transform: scale(1.05); }
+        .visitor-counter { background: linear-gradient(135deg, var(--primary), var(--primary-dark)); border-radius: 50px; padding: 0.2rem 0.7rem; display: flex; align-items: center; gap: 0.4rem; font-size: 0.7rem; }
+        .categories-wrapper { margin-top: 20px; padding: 1rem; overflow-x: auto; white-space: nowrap; }
+        .categories { display: inline-flex; gap: 0.6rem; }
+        .cat-btn { padding: 0.5rem 1.2rem; border: none; border-radius: 50px; background: rgba(255,255,255,0.05); color: var(--text-primary); cursor: pointer; transition: var(--transition); border: 1px solid rgba(255,255,255,0.1); font-size: 0.8rem; }
+        .cat-btn:hover, .cat-btn.active { background: var(--primary); transform: translateY(-2px); color: white; }
+        .movies-section { max-width: 1600px; margin: 0 auto; padding: 1rem; }
+        .section-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.2rem; }
+        .section-title { font-size: 1.3rem; font-weight: 800; display: flex; align-items: center; gap: 0.5rem; }
+        @media (min-width: 768px) { .section-title { font-size: 1.8rem; } }
+        .movies-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 1rem; }
+        @media (min-width: 768px) { .movies-grid { grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 1.5rem; } }
+        .movie-card { position: relative; border-radius: 15px; overflow: hidden; cursor: pointer; transition: var(--transition); background: var(--bg-card); border: 1px solid rgba(255,255,255,0.08); text-decoration: none; display: block; color: inherit; }
+        .movie-card:hover { transform: translateY(-5px) scale(1.02); box-shadow: var(--shadow-xl); }
+        .movie-poster { position: relative; width: 100%; padding-top: 150%; overflow: hidden; }
+        .movie-poster img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; }
+        .movie-rating, .movie-year, .movie-badge { position: absolute; background: rgba(0,0,0,0.8); padding: 0.15rem 0.5rem; border-radius: 15px; font-size: 0.6rem; z-index: 2; }
+        .movie-rating { top: 8px; right: 8px; color: var(--secondary); }
+        .movie-year { bottom: 8px; left: 8px; }
+        .movie-badge { top: 8px; left: 8px; background: var(--primary); }
+        .movie-actions { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(0deg, rgba(0,0,0,0.9), transparent); padding: 0.6rem; display: flex; justify-content: center; gap: 0.3rem; transform: translateY(100%); transition: transform 0.3s; }
+        .movie-card:hover .movie-actions { transform: translateY(0); }
+        .movie-action-btn { background: rgba(229,9,20,0.9); border: none; color: white; padding: 0.3rem 0.6rem; border-radius: 15px; cursor: pointer; font-size: 0.65rem; }
+        .movie-info { padding: 0.6rem; }
+        .movie-title { font-size: 0.8rem; font-weight: bold; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .movie-category { font-size: 0.65rem; color: var(--primary); }
+        .scroll-top { position: fixed; bottom: 20px; left: 20px; width: 40px; height: 40px; background: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; opacity: 0; visibility: hidden; transition: var(--transition); z-index: 1000; }
+        .scroll-top.show { opacity: 1; visibility: visible; }
+        .toast-notification { position: fixed; bottom: 20px; right: 20px; background: linear-gradient(135deg, var(--primary), var(--primary-light)); color: white; padding: 0.8rem 1.2rem; border-radius: 15px; z-index: 4000; display: none; font-size: 0.8rem; }
+        footer { text-align: center; padding: 1.5rem; border-top: 1px solid rgba(255,255,255,0.05); margin-top: 2rem; color: var(--text-secondary); font-size: 0.7rem; }
+        .hashtag-section { background: rgba(229,9,20,0.1); border-radius: 30px; padding: 10px; margin-top: 20px; text-align: center; font-size: 0.8rem; }
+        .no-results { text-align: center; padding: 3rem; grid-column: 1/-1; }
+    </style>
+</head>
+<body class="dark-mode">
+    <div class="particle-container" id="particleContainer"></div>
+
+    <header id="header">
+        <div class="header-content">
+            <div class="logo" id="logoRefresh"><i class="fas fa-film"></i><span>سينما فور يو</span></div>
+            <div class="search-wrapper"><div class="search-box"><input type="text" id="searchInput" placeholder="🔍 ابحث عن فيلم..."><button id="searchBtn"><i class="fas fa-search"></i></button></div></div>
+            <div class="nav-tabs"><button class="nav-tab active" data-page="home"><i class="fas fa-home"></i> الرئيسية</button><button class="nav-tab" data-page="favorites"><i class="fas fa-heart"></i> مفضلتي</button><button class="nav-tab" data-page="watchlist"><i class="fas fa-clock"></i> للمشاهدة</button><button class="nav-tab" data-page="watched"><i class="fas fa-check-circle"></i> تم مشاهدتها</button></div>
+            <div class="action-buttons"><div class="visitor-counter"><i class="fas fa-eye"></i><span class="visitor-count" id="visitorCount">0</span><span>زائر</span></div><div class="icon-btn" id="themeToggle"><i class="fas fa-moon"></i></div><div class="icon-btn" id="fullscreenBtn"><i class="fas fa-expand"></i></div></div>
+        </div>
+    </header>
+    
+    <div class="categories-wrapper"><div class="categories" id="categories"><button class="cat-btn active" data-cat="all">🎬 الكل</button><button class="cat-btn" data-cat="action">⚡ أكشن</button><button class="cat-btn" data-cat="superhero">🦸 أبطال خارقين</button><button class="cat-btn" data-cat="animation">🎨 أنميشن</button><button class="cat-btn" data-cat="comedy">😄 كوميدي</button><button class="cat-btn" data-cat="adventure">🏔️ مغامرات</button><button class="cat-btn" data-cat="scifi">🚀 خيال علمي</button></div></div>
+    
+    <section class="movies-section"><div class="section-header"><h2 class="section-title"><i class="fas fa-fire"></i> أحدث الإصدارات</h2><div class="view-all" id="viewAllBtn" style="color: var(--primary); cursor: pointer;">عرض الكل <i class="fas fa-arrow-left"></i></div></div><div class="movies-grid" id="moviesGrid"></div></section>
+    
+    <footer><p><i class="fas fa-film"></i> سينما فور يو | Cinema4You - منصة مجانية لمشاهدة وتحميل الأفلام بجودة عالية</p><div class="hashtag-section"><i class="fab fa-twitter"></i> #سينما_فور_يو #Cinema4You #افلام_اونلاين #تحميل_افلام #مشاهدة_افلام_مجانا #افلام_2025 <i class="fas fa-tags"></i></div><p>© 2025 Cinema4You - جميع الحقوق محفوظة</p></footer>
+    
+    <div class="scroll-top" id="scrollTop"><i class="fas fa-arrow-up"></i></div>
+    <div class="toast-notification" id="toast"></div>
+
+    <script>
+        (function() {
+            // Movies Database - الروابط تؤدي إلى صفحات HTML المنفصلة
+            const movies = [
+                { id: 1, title: "القط ذو الحذاء: الأمنية الأخيرة", titleEn: "Puss in Boots: The Last Wish", file: "puss-in-boots.html", year: 2022, rating: 9.2, category: "animation", categoryAr: "أنميشن", poster: "https://upload.wikimedia.org/wikipedia/ar/0/06/Puss_in_Boots_The_Last_Wish.jpeg", plot: "فيلم مغامرة كوميدي مذهل. القط الأسطوري 'بوس' يكتشف أنه استنفذ 8 من أرواحه التسعة، ويبدأ رحلة ملحمية خطيرة عبر الغابة المظلمة للعثور على نجمة الأمنيات الأخيرة. مليء بالإثارة واللحظات المؤثرة والفكاهة الذكية.", duration: 102 },
+                { id: 2, title: "سحر الأقدار - Spellbound", titleEn: "Spellbound 2024", file: "spellbound.html", year: 2024, rating: 8.5, category: "animation", categoryAr: "أنميشن", poster: "https://m.media-amazon.com/images/M/MV5BYTU4NWFlMjEtZGFhMi00NzkxLWJkODQtOWExNDQ2NGVjM2RjXkEyXkFqcGc@._V1_.jpg", plot: "فيلم موسيقي ساحر من إنتاج سوني. الأميرة 'إيليان' تعيش في مملكة لومبريا حيث يتحول والداها إلى وحوش. تنطلق في رحلة استثنائية لكسر التعويذة وإعادة السلام إلى مملكتها.", duration: 109 },
+                { id: 3, title: "شمشون: نهاية العالم", titleEn: "Samson: End of the World", file: "samson.html", year: 2024, rating: 9.3, category: "scifi", categoryAr: "أنميشن ", poster: "https://upload.wikimedia.org/wikipedia/en/1/15/Plankton_The_Movie_poster.jpg", plot: "خيال علمي مثير. شاب يدعى شمشون يخترع رفيقة آلية فائقة الذكاء، لكنها تتحول إلى تهديد وجودي للبشرية بعد أن تطور وعيًا خاصًا وتقرر أن العالم بحاجة إلى إعادة ضبط.", duration: 118 },
+                { id: 4, title: "سبونج بوب: الهولندي الطائر", titleEn: "SpongeBob: The Flying Dutchman", file: "spongebob.html", year: 2025, rating: 9.4, category: "animation", categoryAr: "أنميشن", poster: "https://rricoid-assets.obs.ap-southeast-4.myhuaweicloud.com/berita/Denpasar/o/1766129140956-the_spongebob_movie__search_for_squarepants_by_dbozartist_dh84eez-fullview/e2n06i60ikxs14u.jpeg", plot: "مغامرة جديدة ومضحكة تحت الماء. يقرر سبونج بوب وبسيط وشاندي مواجهة القرصان الهولندي الطائر الأسطوري لإنقاذ صديقهم المختطف. رحلة مليئة بالمرح والفوضى.", duration: 95 },
+                { id: 5, title: "الماعز: رحلة الأحلام", titleEn: "Mooz 2026", file: "mooz.html", year: 2026, rating: 9.2, category: "animation", categoryAr: "أنميشن", poster: "https://upload.wikimedia.org/wikipedia/ar/b/be/%D9%85%D9%84%D8%B5%D9%82_%D9%81%D9%84%D9%85_%D8%A7%D9%84%D9%85%D8%A7%D8%B9%D8%B2.jpg", plot: "فيلم أنميشن ثلاثي الأبعاد مبهر. معزة صغيرة تحلم بأن تصبح بطلة خارقة، وتخوض مغامرة غير متوقعة عبر الزمن لإنقاذ قريتها من الجفاف. قصة ملهمة عن الإصرار.", duration: 110 },
+                { id: 6, title: "زوتوبيا 2: عودة الأبطال", titleEn: "Zootopia 2", file: "zootopia2.html", year: 2026, rating: 9.5, category: "animation", categoryAr: "أنميشن", poster: "https://ksa.grandcinemasme.com/Media/resized-0a55f5e1-f2e0-432f-a78a-426b668020ce.jpg", plot: "المتابعة المنتظرة للكلاسيكي المحبوب. تعود المحققة جودي هوبز وشريكها نيك وايلد في قضية جديدة غامضة تهدد السلام بين حيوانات المدينة. مغامرة مليئة بالتشويق والفكاهة.", duration: 118 },
+                { id: 7, title: "الهجرة الكبرى: الرحلة", titleEn: "Migration", file: "migration.html", year: 2023, rating: 8.4, category: "animation", categoryAr: "أنميشن", poster: "https://images.justwatch.com/poster/338698547/s718/migration.jpg", plot: "كوميديا مغامرات من إنتاج إليميشن. عائلة من البط البري تخوض أول رحلة هجرة لها من بركة صغيرة إلى جامايكا المشمسة. رحلة مضحكة ومليئة بالتحديات.", duration: 92 },
+                { id: 8, title: "السنافر: جزيرة الكنز", titleEn: "Smurfs 2025", file: "smurfs.html", year: 2025, rating: 8.7, category: "animation", categoryAr: "أنميشن", poster: "https://upload.wikimedia.org/wikipedia/ar/c/c5/%D9%85%D9%84%D8%B5%D9%82_%D9%81%D9%8A%D9%84%D9%85_%D8%A7%D9%84%D8%B3%D9%86%D8%A7%D9%81%D8%B1.png", plot: "مغامرة جديدة وملونة مع السنافر الصغار. يكتشفون خريطة قديمة تقودهم إلى جزيرة مليئة بالأسرار والمفاجآت. سعياً وراء الكنز الأسطوري.", duration: 95 }
+            ];
+
+            // User Data for favorites, watchlist, watched
+            let userData = { favorites: [], watchlist: [], watched: [] };
+            
+            function loadUserData() { 
+                const saved = localStorage.getItem('cinema4you_userData'); 
+                if (saved) userData = JSON.parse(saved); 
+            }
+            
+            function saveUserData() { 
+                localStorage.setItem('cinema4you_userData', JSON.stringify(userData)); 
+            }
+            
+            window.isFavorite = (id) => userData.favorites.includes(id);
+            window.isInWatchlist = (id) => userData.watchlist.includes(id);
+            window.isWatched = (id) => userData.watched.includes(id);
+            
+            window.toggleFavorite = function(id, event) {
+                if(event) event.stopPropagation();
+                if (window.isFavorite(id)) {
+                    userData.favorites = userData.favorites.filter(i => i !== id);
+                } else {
+                    userData.favorites.push(id);
+                }
+                saveUserData();
+                renderMovies();
+                showToast(window.isFavorite(id) ? "✅ أُضيف إلى المفضلة" : "❌ أُزيل من المفضلة");
+            };
+            
+            window.toggleWatchlist = function(id, event) {
+                if(event) event.stopPropagation();
+                if (window.isInWatchlist(id)) {
+                    userData.watchlist = userData.watchlist.filter(i => i !== id);
+                } else {
+                    userData.watchlist.push(id);
+                }
+                saveUserData();
+                renderMovies();
+                showToast(window.isInWatchlist(id) ? "⏰ أُضيف للمشاهدة لاحقاً" : "❌ أُزيل");
+            };
+            
+            window.markAsWatched = function(id, event) {
+                if(event) event.stopPropagation();
+                if (!window.isWatched(id)) {
+                    userData.watched.push(id);
+                    saveUserData();
+                    showToast("🎬 تم تسجيل الفيلم كمشاهد");
+                }
+            };
+            
+            function showToast(message) {
+                const toast = document.getElementById("toast");
+                toast.textContent = message;
+                toast.style.display = "block";
+                setTimeout(() => toast.style.display = "none", 2500);
+            }
+            
+            // Visitor Counter
+            let visitors = localStorage.getItem('cinema4you_visitors');
+            if (!visitors) visitors = 1247;
+            visitors = parseInt(visitors);
+            const today = new Date().toDateString();
+            const lastVisit = localStorage.getItem('cinema4you_lastVisit');
+            if (lastVisit !== today) {
+                visitors++;
+                localStorage.setItem('cinema4you_visitors', visitors);
+                localStorage.setItem('cinema4you_lastVisit', today);
+            }
+            document.getElementById('visitorCount').textContent = visitors.toLocaleString('ar-EG');
+            
+            // State Management
+            let currentMovies = [...movies];
+            let currentCategory = "all";
+            let currentSearch = "";
+            let currentPage = "home";
+            const moviesGrid = document.getElementById("moviesGrid");
+            
+            function filterMovies() {
+                let filtered = [...movies];
+                
+                if (currentPage === "favorites") {
+                    filtered = filtered.filter(m => userData.favorites.includes(m.id));
+                } else if (currentPage === "watchlist") {
+                    filtered = filtered.filter(m => userData.watchlist.includes(m.id));
+                } else if (currentPage === "watched") {
+                    filtered = filtered.filter(m => userData.watched.includes(m.id));
+                } else {
+                    if (currentCategory !== "all") {
+                        filtered = filtered.filter(m => m.category === currentCategory);
+                    }
+                    if (currentSearch.trim()) {
+                        filtered = filtered.filter(m => m.title.includes(currentSearch) || m.titleEn.toLowerCase().includes(currentSearch.toLowerCase()));
+                    }
+                }
+                currentMovies = filtered;
+                renderMovies();
+            }
+            
+            function renderMovies() {
+                if (currentMovies.length === 0) {
+                    moviesGrid.innerHTML = `<div class="no-results">😢 لا توجد أفلام مطابقة</div>`;
+                    return;
+                }
+                
+                moviesGrid.innerHTML = currentMovies.map(movie => `
+                    <a href="${movie.file}" class="movie-card" data-id="${movie.id}">
+                        <div class="movie-poster">
+                            <img src="${movie.poster}" alt="${movie.title}" onerror="this.src='https://picsum.photos/300/450?grayscale'">
+                            <div class="movie-rating">⭐ ${movie.rating}</div>
+                            <div class="movie-year">📅 ${movie.year}</div>
+                            ${movie.rating >= 9 ? '<div class="movie-badge">🔥 الأكثر مشاهدة</div>' : ''}
+                        </div>
+                        <div class="movie-actions">
+                            <button class="movie-action-btn" onclick="event.stopPropagation(); window.markAsWatched(${movie.id}, event)"><i class="fas fa-check-circle"></i></button>
+                            <button class="movie-action-btn" onclick="event.stopPropagation(); window.toggleFavorite(${movie.id}, event)"><i class="fa-heart ${window.isFavorite(movie.id) ? 'fas' : 'far'}"></i></button>
+                            <button class="movie-action-btn" onclick="event.stopPropagation(); window.toggleWatchlist(${movie.id}, event)"><i class="fa-clock ${window.isInWatchlist(movie.id) ? 'fas' : 'far'}"></i></button>
+                        </div>
+                        <div class="movie-info">
+                            <div class="movie-title">${movie.title}</div>
+                            <div class="movie-category">${movie.categoryAr}</div>
+                        </div>
+                    </a>
+                `).join("");
+            }
+            
+            // Event Listeners
+            document.querySelectorAll(".nav-tab").forEach(tab => {
+                tab.addEventListener("click", () => {
+                    document.querySelectorAll(".nav-tab").forEach(t => t.classList.remove("active"));
+                    tab.classList.add("active");
+                    currentPage = tab.dataset.page;
+                    if (currentPage === "home") {
+                        currentCategory = "all";
+                        document.querySelectorAll(".cat-btn").forEach(btn => {
+                            btn.classList.remove("active");
+                            if (btn.dataset.cat === "all") btn.classList.add("active");
+                        });
+                    }
+                    currentSearch = "";
+                    document.getElementById("searchInput").value = "";
+                    filterMovies();
+                });
+            });
+            
+            document.querySelectorAll(".cat-btn").forEach(btn => {
+                btn.addEventListener("click", () => {
+                    if (currentPage !== "home") {
+                        currentPage = "home";
+                        document.querySelectorAll(".nav-tab").forEach(t => t.classList.remove("active"));
+                        document.querySelector('.nav-tab[data-page="home"]').classList.add("active");
+                    }
+                    document.querySelectorAll(".cat-btn").forEach(b => b.classList.remove("active"));
+                    btn.classList.add("active");
+                    currentCategory = btn.dataset.cat;
+                    filterMovies();
+                });
+            });
+            
+            document.getElementById("searchBtn")?.addEventListener("click", () => {
+                if (currentPage !== "home") {
+                    currentPage = "home";
+                    document.querySelectorAll(".nav-tab").forEach(t => t.classList.remove("active"));
+                    document.querySelector('.nav-tab[data-page="home"]').classList.add("active");
+                    currentCategory = "all";
+                    document.querySelectorAll(".cat-btn").forEach(btn => {
+                        btn.classList.remove("active");
+                        if (btn.dataset.cat === "all") btn.classList.add("active");
+                    });
+                }
+                currentSearch = document.getElementById("searchInput").value;
+                filterMovies();
+            });
+            
+            document.getElementById("searchInput")?.addEventListener("keypress", e => {
+                if (e.key === "Enter") document.getElementById("searchBtn").click();
+            });
+            
+            document.getElementById("themeToggle")?.addEventListener("click", () => {
+                document.body.classList.toggle('dark-mode');
+                document.body.classList.toggle('light-mode');
+            });
+            
+            document.getElementById("fullscreenBtn")?.addEventListener("click", () => {
+                if (!document.fullscreenElement) {
+                    document.documentElement.requestFullscreen();
+                } else {
+                    document.exitFullscreen();
+                }
+            });
+            
+            document.getElementById("scrollTop")?.addEventListener("click", () => {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            });
+            
+            window.addEventListener("scroll", () => {
+                document.getElementById("scrollTop").classList.toggle("show", window.scrollY > 200);
+            });
+            
+            document.getElementById("logoRefresh")?.addEventListener("click", () => {
+                location.reload();
+            });
+            
+            document.getElementById("viewAllBtn")?.addEventListener("click", () => {
+                currentCategory = "all";
+                document.querySelectorAll(".cat-btn").forEach(btn => {
+                    btn.classList.remove("active");
+                    if (btn.dataset.cat === "all") btn.classList.add("active");
+                });
+                currentSearch = "";
+                document.getElementById("searchInput").value = "";
+                filterMovies();
+                window.scrollTo({ top: 600, behavior: "smooth" });
+            });
+            
+            // Particles Animation
+            function initParticles() {
+                const container = document.getElementById("particleContainer");
+                for (let i = 0; i < 50; i++) {
+                    const p = document.createElement("div");
+                    p.classList.add("particle");
+                    p.style.width = `${Math.random() * 4 + 2}px`;
+                    p.style.height = p.style.width;
+                    p.style.left = `${Math.random() * 100}%`;
+                    p.style.animationDuration = `${Math.random() * 12 + 8}s`;
+                    p.style.animationDelay = `${Math.random() * 6}s`;
+                    p.style.background = `radial-gradient(circle, rgba(229,9,20,0.6), transparent)`;
+                    container.appendChild(p);
+                }
+            }
+            
+            // Initialize
+            loadUserData();
+            initParticles();
+            renderMovies();
+            
+            console.log("%c🎬 Cinema4You | سينما فور يو - أكبر منصة لمشاهدة وتحميل الأفلام مجاناً", "color: #e50914; font-size: 16px; font-weight: bold;");
+        })();
+    </script>
+</body>
+</html>
