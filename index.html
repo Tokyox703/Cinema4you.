@@ -62,8 +62,6 @@
         .categories { display: inline-flex; gap: 0.6rem; }
         .cat-btn { padding: 0.5rem 1.2rem; border: none; border-radius: 50px; background: rgba(255,255,255,0.05); color: var(--text-primary); cursor: pointer; transition: var(--transition); border: 1px solid rgba(255,255,255,0.1); font-size: 0.8rem; }
         .cat-btn:hover, .cat-btn.active { background: var(--primary); transform: translateY(-2px); color: white; }
-        .ad-native { max-width: 1600px; margin: 0 auto 1.5rem auto; padding: 0 1rem; text-align: center; background: rgba(229,9,20,0.05); border-radius: 20px; overflow: hidden; }
-        .ad-native-title { font-size: 0.7rem; color: var(--text-secondary); margin-bottom: 0.5rem; text-align: center; }
         .ad-smartlink { background: linear-gradient(135deg, rgba(229,9,20,0.15), rgba(255,215,0,0.1)); border-radius: 15px; padding: 0.8rem; margin: 1rem 0; text-align: center; border: 1px dashed var(--primary); }
         .ad-smartlink a { display: inline-block; background: var(--primary); color: white; padding: 0.6rem 1.5rem; border-radius: 50px; text-decoration: none; font-weight: bold; transition: var(--transition); }
         .ad-smartlink a:hover { transform: scale(1.05); background: var(--primary-dark); }
@@ -113,13 +111,6 @@
     </header>
     
     <div class="categories-wrapper"><div class="categories" id="categories"><button class="cat-btn active" data-cat="all">🎬 الكل</button><button class="cat-btn" data-cat="action">⚡ أكشن</button><button class="cat-btn" data-cat="superhero">🦸 أبطال خارقين</button><button class="cat-btn" data-cat="animation">🎨 أنميشن</button><button class="cat-btn" data-cat="comedy">😄 كوميدي</button><button class="cat-btn" data-cat="adventure">🏔️ مغامرات</button><button class="cat-btn" data-cat="scifi">🚀 خيال علمي</button></div></div>
-    
-    <!-- ========== إعلان Native Banner ========== -->
-    <div class="ad-native">
-        <div class="ad-native-title"><i class="fas fa-ad"></i> إعلان ممول</div>
-        <div id="container-80875d651d06345ad1245fb5bd2d3b45"></div>
-        <script async="async" data-cfasync="false" src="https://pl29118842.profitablecpmratenetwork.com/80875d651d06345ad1245fb5bd2d3b45/invoke.js"></script>
-    </div>
     
     <!-- ========== إعلان Smartlink ========== -->
     <div class="ad-smartlink" style="max-width: 1600px; margin: 0 auto 1rem auto; width: calc(100% - 2rem);">
@@ -191,15 +182,10 @@
                 }
             });
             
-            // الطريقة الثانية: عند تحميل الصفحة بالكامل (اختياري - يمكن تفعيله)
-            // setTimeout(function() {
-            //     if (!popunderExecuted) executePopunder();
-            // }, 3000);
-            
             console.log("🎯 Popunder script loaded and ready");
         })();
         
-        // Movies Database
+        // Movies Database - تم إضافة 3 أفلام جديدة (موانا 2، سحلية ليو، ماريو)
         const movies = [
             { id: 1, title: "القط ذو الحذاء: الأمنية الأخيرة", titleEn: "Puss in Boots: The Last Wish", file: "puss-in-boots.html", year: 2022, rating: 9.2, category: "animation", categoryAr: "أنميشن", poster: "https://upload.wikimedia.org/wikipedia/ar/0/06/Puss_in_Boots_The_Last_Wish.jpeg", plot: "فيلم مغامرة كوميدي مذهل.", duration: 102 },
             { id: 2, title: "سحر الأقدار - Spellbound", titleEn: "Spellbound 2024", file: "spellbound.html", year: 2024, rating: 8.5, category: "animation", categoryAr: "أنميشن", poster: "https://m.media-amazon.com/images/M/MV5BYTU4NWFlMjEtZGFhMi00NzkxLWJkODQtOWExNDQ2NGVjM2RjXkEyXkFqcGc@._V1_.jpg", plot: "فيلم موسيقي ساحر من إنتاج سوني.", duration: 109 },
@@ -207,8 +193,12 @@
             { id: 4, title: "سبونج بوب: الهولندي الطائر", titleEn: "SpongeBob: The Flying Dutchman", file: "spongebob.html", year: 2025, rating: 9.4, category: "animation", categoryAr: "أنميشن", poster: "https://rricoid-assets.obs.ap-southeast-4.myhuaweicloud.com/berita/Denpasar/o/1766129140956-the_spongebob_movie__search_for_squarepants_by_dbozartist_dh84eez-fullview/e2n06i60ikxs14u.jpeg", plot: "مغامرة جديدة ومضحكة تحت الماء.", duration: 95 },
             { id: 5, title: "الماعز: رحلة الأحلام", titleEn: "Mooz 2026", file: "mooz.html", year: 2026, rating: 9.2, category: "animation", categoryAr: "أنميشن", poster: "https://upload.wikimedia.org/wikipedia/ar/b/be/%D9%85%D9%84%D8%B5%D9%82_%D9%81%D9%84%D9%85_%D8%A7%D9%84%D9%85%D8%A7%D8%B9%D8%B2.jpg", plot: "فيلم أنميشن ثلاثي الأبعاد مبهر.", duration: 110 },
             { id: 6, title: "زوتوبيا 2: عودة الأبطال", titleEn: "Zootopia 2", file: "zootopia2.html", year: 2026, rating: 9.5, category: "animation", categoryAr: "أنميشن", poster: "https://ksa.grandcinemasme.com/Media/resized-0a55f5e1-f2e0-432f-a78a-426b668020ce.jpg", plot: "المتابعة المنتظرة للكلاسيكي المحبوب.", duration: 118 },
-            { id: 7, title: "الهجرة الكبرى: الرحلة", titleEn: "Migration", file: "migration.html", year: 2023, rating: 8.4, category: "animation", categoryAr: "أنميشن", poster: "https://images.justwatch.com/poster/338698547/s718/migration.jpg", plot: "كوميديا مغامرات من إنتاج إليميشن.", duration: 92 },
-            { id: 8, title: "السنافر: جزيرة الكنز", titleEn: "Smurfs 2025", file: "smurfs.html", year: 2025, rating: 8.7, category: "animation", categoryAr: "أنميشن", poster: "https://upload.wikimedia.org/wikipedia/ar/c/c5/%D9%85%D9%84%D8%B5%D9%82_%D9%81%D9%8A%D9%84%D9%85_%D8%A7%D9%84%D8%B3%D9%86%D8%A7%D9%81%D8%B1.png", plot: "مغامرة جديدة وملونة مع السنافر الصغار.", duration: 95 }
+            { id: 7, title: "الهجرة الكبرى: الرحلة", titleEn: "Migration", file: "migration.html", year: 2023, rating: 8.4, category: "animation", categoryAr: "أنميشن", poster: "https://m.media-amazon.com/images/M/MV5BYjdlYWJjZTctODViZS00ODVlLTljOTEtOTZhYWZhZTRkZDM1XkEyXkFqcGc@._V1_.jpg", plot: "كوميديا مغامرات من إنتاج إليميشن.", duration: 92 },
+            { id: 8, title: "السنافر: جزيرة الكنز", titleEn: "Smurfs 2025", file: "smurfs.html", year: 2025, rating: 8.7, category: "animation", categoryAr: "أنميشن", poster: "https://upload.wikimedia.org/wikipedia/ar/c/c5/%D9%85%D9%84%D8%B5%D9%82_%D9%81%D9%8A%D9%84%D9%85_%D8%A7%D9%84%D8%B3%D9%86%D8%A7%D9%81%D8%B1.png", plot: "مغامرة جديدة وملونة مع السنافر الصغار.", duration: 95 },
+            // === الأفلام الثلاثة الجديدة ===
+            { id: 9, title: "موانا 2", titleEn: "Moana 2", file: "moana2.html", year: 2024, rating: 9.0, category: "animation", categoryAr: "أنميشن", poster: "https://upload.wikimedia.org/wikipedia/ar/2/20/%D8%BA%D9%84%D8%A7%D9%81_%D9%81%D9%8A%D9%84%D9%85_%D9%85%D9%88%D8%A7%D9%86%D8%A7_2.png", plot: "موانا وماوي يعودان في مغامرة جديدة عبر المحيط الهادئ.", duration: 110 },
+            { id: 10, title: "سحلية ليو", titleEn: "Leo", file: "leo.html", year: 2023, rating: 8.8, category: "animation", categoryAr: "أنميشن", poster: "https://i.imgur.com/24fvjjA.jpg", plot: "سحلية عجوز تبلغ من العمر 74 عامًا تخوض مغامرة كوميدية مع طلاب الصف الخامس.", duration: 102 },
+            { id: 11, title: "سوبر ماريو: الفيلم", titleEn: "The Super Mario Bros. Movie", file: "mario.html", year: 2023, rating: 9.1, category: "animation", categoryAr: "أنميشن", poster: "https://cimanow.cc/wp-content/uploads/2023/05/%D9%81%D9%8A%D9%84%D9%85-The-Super-Mario-Bros.-Movie-2023-%D9%85%D8%AA%D8%B1%D8%AC%D9%85.jpg", plot: "مغامرة ماريو ولويس في عالم مملكة الفطر.", duration: 92 }
         ];
 
         let userData = { favorites: [], watchlist: [], watched: [] };
@@ -392,7 +382,7 @@
         initParticles();
         renderMovies();
         
-        console.log("%c🎬 Cinema4You | سينما فور يو - تم تحميل الإعلانات بنجاح", "color: #e50914; font-size: 16px; font-weight: bold;");
+        console.log("%c🎬 Cinema4You | سينما فور يو - تم تحميل الموقع بنجاح", "color: #e50914; font-size: 16px; font-weight: bold;");
     </script>
 </body>
 </html>
