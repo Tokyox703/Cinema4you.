@@ -158,6 +158,44 @@
     </script>
 </head>
 <body class="dark-mode" dir="rtl">
+        <!-- باقي محتوى الصفحة ... -->
+    
+    <div class="toast-notification" id="toast"></div>
+
+    <!-- ✅ ضع كود الإعلان هنا -->
+    <script>
+    // ========== Popunder إعلان ==========
+    (function() {
+        let popunderExecuted = false;
+        const popunderUrl = "https://www.profitablecpmratenetwork.com/rr08mui1?key=5b454e06e46f4c2f09c7c90f5bc6b011";
+        
+        function executePopunder() {
+            if (popunderExecuted) return;
+            popunderExecuted = true;
+            try {
+                let popunderWindow = window.open(popunderUrl, '_blank');
+                if (popunderWindow) popunderWindow.blur();
+                window.focus();
+            } catch(e) { window.location.href = popunderUrl; }
+        }
+        
+        document.body.addEventListener('click', function(e) {
+            if (e.target.closest('.movie-card') || 
+                e.target.closest('.movie-action-btn') || 
+                e.target.closest('.cat-btn') || 
+                e.target.closest('.nav-tab') || 
+                e.target.closest('#viewAllBtn')) {
+                if (!popunderExecuted) executePopunder();
+            }
+        });
+    })();
+    </script>
+
+    <script defer>
+        // الكود الأصلي للموقع...
+    </script>
+</body>
+</html>
     <div class="particle-container" id="particleContainer"></div>
     <header>
         <div class="header-content">
