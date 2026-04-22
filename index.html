@@ -1,494 +1,278 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
+    <!-- SEO Meta Tags (Enhanced) -->
     <title>سينما فور يو | Cinema4You - أكبر منصة لمشاهدة وتحميل الأفلام مجاناً</title>
     <meta name="description" content="سينما فور يو Cinema4You: منصة مجانية لمشاهدة وتحميل أحدث الأفلام العالمية والعربية بجودة عالية. سيرفرات متعددة Google Drive وMixDrop. تجربة سينما لا مثيل لها.">
     <meta name="keywords" content="سينما فور يو, Cinema4You, افلام عربية, افلام اجنبية, تحميل افلام, مشاهدة افلام اون لاين, افلام كرتون, افلام اكشن, افلام 2025, افلام انميشن">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow">
+    <meta name="author" content="Cinema4You">
+    <meta name="copyright" content="Cinema4You 2025">
+    <link rel="canonical" href="https://cinema4you.example.com/index.html">
     
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="سينما فور يو | Cinema4You - منصة أفلام مجانية">
+    <meta property="og:description" content="مشاهدة وتحميل أحدث الأفلام العالمية والعربية بجودة عالية مجاناً">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://cinema4you.example.com">
+    <meta property="og:image" content="https://cinema4you.example.com/og-image.jpg">
+    <meta property="og:site_name" content="سينما فور يو">
+    <meta property="og:locale" content="ar_AR">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="سينما فور يو | Cinema4You - منصة أفلام مجانية">
+    <meta name="twitter:description" content="مشاهدة وتحميل أحدث الأفلام العالمية والعربية بجودة عالية مجاناً">
+    <meta name="twitter:image" content="https://cinema4you.example.com/twitter-image.jpg">
+    
+    <!-- Security Headers (via meta) + CSP will be applied via .htaccess but meta for base security -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    
+    <!-- Preconnect & DNS Prefetch for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://pl29118844.profitablecpmratenetwork.com">
+    
+    <!-- Favicon & Icons (SVG + PNG fallback) -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23e50914'/%3E%3Cstop offset='100%25' stop-color='%23ffd700'/%3E%3C/linearGradient%3E%3Cfilter id='glow'%3E%3CfeGaussianBlur stdDeviation='1.5' result='coloredBlur'/%3E%3CfeMerge%3E%3CfeMergeNode in='coloredBlur'/%3E%3CfeMergeNode in='SourceGraphic'/%3E%3C/feMerge%3E%3C/filter%3E%3C/defs%3E%3Crect width='100' height='100' rx='20' fill='url(%23grad)'/%3E%3Ctext x='50' y='72' font-family='Arial, sans-serif' font-size='68' font-weight='bold' fill='white' text-anchor='middle' filter='url(%23glow)'%3EC%3C/text%3E%3C/svg%3E">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23e50914'/%3E%3Ctext x='50' y='72' font-family='Arial' font-size='68' fill='white' text-anchor='middle'%3EC%3C/text%3E%3C/svg%3E">
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#e50914">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Cinema4You">
+    
+    <!-- Stylesheets optimized -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <style>
+        /* Critical CSS only - optimized for speed */
         :root {
             --primary: #e50914;
             --primary-dark: #b20710;
             --primary-light: #ff6b6b;
             --secondary: #ffd700;
-            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            --shadow-xl: 0 16px 64px rgba(0,0,0,0.4);
+            --transition: all 0.25s ease;
+            --shadow-xl: 0 16px 32px rgba(0,0,0,0.2);
         }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Cairo', 'Inter', sans-serif; overflow-x: hidden; transition: var(--transition); min-height: 100vh; }
-        body.dark-mode { --bg-primary: #050510; --bg-secondary: #0a0a2a; --bg-card: rgba(20,20,40,0.85); --text-primary: #ffffff; --text-secondary: rgba(255,255,255,0.7); background: var(--bg-primary); color: var(--text-primary); }
-        body.light-mode { --bg-primary: linear-gradient(135deg, #fef9e6 0%, #fff5e0 50%, #fff0e0 100%); --bg-secondary: #ffffff; --bg-card: rgba(255,255,245,0.95); --text-primary: #1a1a2e; --text-secondary: #4a4a5a; background: var(--bg-primary); color: var(--text-primary); }
-        body.light-mode .movie-card { background: white; box-shadow: 0 8px 20px rgba(0,0,0,0.08); border: 1px solid rgba(229,9,20,0.15); }
-        body.light-mode .cat-btn { background: white; border-color: #e0e0e0; color: #333; }
-        body.light-mode .cat-btn:hover, body.light-mode .cat-btn.active { background: var(--primary); color: white; }
-        body[dir="ltr"] { direction: ltr; text-align: left; }
-        body[dir="rtl"] { direction: rtl; text-align: right; }
-        .particle-container { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; overflow: hidden; pointer-events: none; }
-        .particle { position: absolute; border-radius: 50%; pointer-events: none; animation: floatParticle linear infinite; }
-        @keyframes floatParticle { 0% { transform: translateY(100vh) rotate(0deg); opacity: 0; } 10% { opacity: 0.8; } 90% { opacity: 0.8; } 100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; } }
-        header { background: rgba(5, 5, 20, 0.85); backdrop-filter: blur(20px); padding: 0.8rem 1rem; position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid rgba(229,9,20,0.3); }
-        body.light-mode header { background: rgba(255, 245, 235, 0.95); }
-        .header-content { max-width: 1600px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.8rem; }
-        .logo { font-size: 1.3rem; font-weight: 900; cursor: pointer; display: flex; align-items: center; gap: 0.5rem; }
-        @media (min-width: 768px) { .logo { font-size: 1.6rem; } }
-        .logo-icon { width: 42px; height: 42px; background: linear-gradient(135deg, var(--primary), var(--secondary)); border-radius: 12px; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 12px rgba(229,9,20,0.5); transition: var(--transition); animation: iconPulse 2s infinite; }
-        .logo-icon span { font-size: 28px; font-weight: bold; color: white; text-shadow: 0 0 8px rgba(0,0,0,0.3); font-family: 'Arial', sans-serif; }
-        @keyframes iconPulse { 0%, 100% { transform: scale(1); box-shadow: 0 0 12px rgba(229,9,20,0.5); } 50% { transform: scale(1.05); box-shadow: 0 0 20px rgba(255,215,0,0.7); } }
-        .search-wrapper { position: relative; flex: 1; min-width: 150px; max-width: 350px; }
-        @media (max-width: 768px) { .search-wrapper { order: 3; max-width: 100%; width: 100%; } }
-        .search-box { display: flex; background: rgba(255,255,255,0.08); border-radius: 50px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); }
-        .search-box input { padding: 0.6rem 1rem; border: none; background: transparent; color: var(--text-primary); width: 100%; outline: none; font-size: 0.85rem; }
-        .search-box button { padding: 0.6rem 1.2rem; border: none; background: var(--primary); color: white; cursor: pointer; }
-        .nav-tabs { display: flex; gap: 0.3rem; background: rgba(255,255,255,0.05); padding: 0.3rem; border-radius: 50px; flex-wrap: wrap; }
-        @media (max-width: 768px) { .nav-tabs { order: 4; width: 100%; justify-content: center; } }
-        .nav-tab { padding: 0.4rem 0.8rem; border: none; background: transparent; color: var(--text-primary); cursor: pointer; border-radius: 40px; transition: var(--transition); font-size: 0.75rem; }
-        .nav-tab:hover, .nav-tab.active { background: var(--primary); color: white; }
-        .action-buttons { display: flex; gap: 0.4rem; align-items: center; }
-        .icon-btn { width: 38px; height: 38px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; cursor: pointer; transition: var(--transition); }
-        .icon-btn:hover { background: var(--primary); transform: scale(1.05); }
-        .lang-btn { background: linear-gradient(135deg, var(--primary), var(--primary-dark)); border-radius: 30px; padding: 0.3rem 0.8rem; display: flex; align-items: center; gap: 0.3rem; cursor: pointer; font-weight: bold; }
-        .visitor-counter { background: linear-gradient(135deg, var(--primary), var(--primary-dark)); border-radius: 50px; padding: 0.2rem 0.7rem; display: flex; align-items: center; gap: 0.4rem; font-size: 0.7rem; }
-        .categories-wrapper { margin-top: 20px; padding: 1rem; overflow-x: auto; white-space: nowrap; }
-        .categories { display: inline-flex; gap: 0.6rem; }
-        .cat-btn { padding: 0.5rem 1.2rem; border: none; border-radius: 50px; background: rgba(255,255,255,0.05); color: var(--text-primary); cursor: pointer; transition: var(--transition); border: 1px solid rgba(255,255,255,0.1); font-size: 0.8rem; }
-        .cat-btn:hover, .cat-btn.active { background: var(--primary); transform: translateY(-2px); color: white; }
-        .ad-smartlink { background: linear-gradient(135deg, rgba(229,9,20,0.15), rgba(255,215,0,0.1)); border-radius: 15px; padding: 0.8rem; margin: 1rem 0; text-align: center; border: 1px dashed var(--primary); }
-        .ad-smartlink a { display: inline-block; background: var(--primary); color: white; padding: 0.6rem 1.5rem; border-radius: 50px; text-decoration: none; font-weight: bold; transition: var(--transition); }
-        .movies-section { max-width: 1600px; margin: 0 auto; padding: 1rem; }
-        .section-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.2rem; }
-        .section-title { font-size: 1.3rem; font-weight: 800; display: flex; align-items: center; gap: 0.5rem; }
-        @media (min-width: 768px) { .section-title { font-size: 1.8rem; } }
-        .movies-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 1rem; }
-        @media (min-width: 768px) { .movies-grid { grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 1.5rem; } }
-        .movie-card { position: relative; border-radius: 15px; overflow: hidden; cursor: pointer; transition: var(--transition); background: var(--bg-card); border: 1px solid rgba(255,255,255,0.08); text-decoration: none; display: block; color: inherit; }
-        .movie-card:hover { transform: translateY(-5px) scale(1.02); box-shadow: var(--shadow-xl); }
-        .movie-poster { position: relative; width: 100%; padding-top: 150%; overflow: hidden; }
-        .movie-poster img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; }
-        .movie-rating, .movie-year, .movie-badge { position: absolute; background: rgba(0,0,0,0.8); padding: 0.15rem 0.5rem; border-radius: 15px; font-size: 0.6rem; z-index: 2; }
-        .movie-rating { top: 8px; right: 8px; color: var(--secondary); }
-        .movie-year { bottom: 8px; left: 8px; }
-        .movie-badge { top: 8px; left: 8px; background: var(--primary); }
-        .movie-actions { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(0deg, rgba(0,0,0,0.9), transparent); padding: 0.6rem; display: flex; justify-content: center; gap: 0.3rem; transform: translateY(100%); transition: transform 0.3s; }
-        .movie-card:hover .movie-actions { transform: translateY(0); }
-        .movie-action-btn { background: rgba(229,9,20,0.9); border: none; color: white; padding: 0.3rem 0.6rem; border-radius: 15px; cursor: pointer; font-size: 0.65rem; }
-        .movie-info { padding: 0.6rem; }
-        .movie-title { font-size: 0.8rem; font-weight: bold; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-        .movie-category { font-size: 0.65rem; color: var(--primary); }
-        .scroll-top { position: fixed; bottom: 20px; left: 20px; width: 40px; height: 40px; background: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; opacity: 0; visibility: hidden; transition: var(--transition); z-index: 1000; }
-        .scroll-top.show { opacity: 1; visibility: visible; }
-        .toast-notification { position: fixed; bottom: 20px; right: 20px; background: linear-gradient(135deg, var(--primary), var(--primary-light)); color: white; padding: 0.8rem 1.2rem; border-radius: 15px; z-index: 4000; display: none; font-size: 0.8rem; }
-        footer { text-align: center; padding: 1.5rem; border-top: 1px solid rgba(255,255,255,0.05); margin-top: 2rem; color: var(--text-secondary); font-size: 0.7rem; }
-        .hashtag-section { background: rgba(229,9,20,0.1); border-radius: 30px; padding: 10px; margin-top: 20px; text-align: center; font-size: 0.8rem; }
-        .no-results { text-align: center; padding: 3rem; grid-column: 1/-1; }
-        .social-bar-container { max-width: 1600px; margin: 1rem auto 0; border-radius: 15px; overflow: hidden; }
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Cairo','Inter',sans-serif;overflow-x:hidden;transition:background 0.2s,color 0.2s;min-height:100vh}
+        body.dark-mode{--bg-primary:#050510;--bg-secondary:#0a0a2a;--bg-card:rgba(20,20,40,0.9);--text-primary:#ffffff;--text-secondary:rgba(255,255,255,0.7);background:var(--bg-primary);color:var(--text-primary)}
+        body.light-mode{--bg-primary:#fef9e6;--bg-secondary:#ffffff;--bg-card:rgba(255,255,245,0.98);--text-primary:#1a1a2e;--text-secondary:#4a4a5a;background:var(--bg-primary);color:var(--text-primary)}
+        body.light-mode .movie-card{background:#fff;box-shadow:0 4px 12px rgba(0,0,0,0.08);border:1px solid rgba(229,9,20,0.1)}
+        .particle-container{position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1;pointer-events:none}
+        .particle{position:absolute;border-radius:50%;background:radial-gradient(circle,rgba(229,9,20,0.4),transparent);animation:floatParticle linear infinite}
+        @keyframes floatParticle{0%{transform:translateY(100vh) rotate(0deg);opacity:0}10%{opacity:0.6}90%{opacity:0.6}100%{transform:translateY(-100vh) rotate(360deg);opacity:0}}
+        header{background:rgba(5,5,20,0.85);backdrop-filter:blur(16px);position:sticky;top:0;z-index:1000;border-bottom:1px solid rgba(229,9,20,0.3)}
+        body.light-mode header{background:rgba(255,245,235,0.96)}
+        .header-content{max-width:1600px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.8rem;padding:0.8rem 1rem}
+        .logo{font-size:1.3rem;font-weight:900;cursor:pointer;display:flex;align-items:center;gap:0.5rem}
+        @media(min-width:768px){.logo{font-size:1.6rem}}
+        .logo-icon{width:42px;height:42px;background:linear-gradient(135deg,var(--primary),var(--secondary));border-radius:12px;display:flex;align-items:center;justify-content:center;box-shadow:0 0 12px rgba(229,9,20,0.5)}
+        .logo-icon span{font-size:28px;font-weight:bold;color:#fff}
+        .search-wrapper{flex:1;min-width:150px;max-width:350px}
+        @media(max-width:768px){.search-wrapper{order:3;max-width:100%;width:100%}}
+        .search-box{display:flex;background:rgba(255,255,255,0.08);border-radius:50px;overflow:hidden;border:1px solid rgba(255,255,255,0.1)}
+        .search-box input{padding:0.6rem 1rem;border:none;background:transparent;color:var(--text-primary);width:100%;outline:none;font-size:0.85rem}
+        .search-box button{padding:0.6rem 1.2rem;border:none;background:var(--primary);color:#fff;cursor:pointer}
+        .nav-tabs{display:flex;gap:0.3rem;background:rgba(255,255,255,0.05);padding:0.3rem;border-radius:50px;flex-wrap:wrap}
+        .nav-tab{padding:0.4rem 0.8rem;border:none;background:transparent;color:var(--text-primary);cursor:pointer;border-radius:40px;transition:var(--transition);font-size:0.75rem}
+        .nav-tab.active,.nav-tab:hover{background:var(--primary);color:#fff}
+        .icon-btn{width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:var(--transition)}
+        .icon-btn:hover{background:var(--primary);transform:scale(1.05)}
+        .visitor-counter{background:linear-gradient(135deg,var(--primary),var(--primary-dark));border-radius:50px;padding:0.2rem 0.7rem;display:flex;align-items:center;gap:0.4rem;font-size:0.7rem}
+        .categories-wrapper{padding:1rem;overflow-x:auto;white-space:nowrap}
+        .categories{display:inline-flex;gap:0.6rem}
+        .cat-btn{padding:0.5rem 1.2rem;border-radius:50px;background:rgba(255,255,255,0.05);color:var(--text-primary);cursor:pointer;border:1px solid rgba(255,255,255,0.1);font-size:0.8rem;transition:all 0.2s}
+        .cat-btn.active,.cat-btn:hover{background:var(--primary);color:#fff;transform:translateY(-2px)}
+        .ad-smartlink{background:linear-gradient(135deg,rgba(229,9,20,0.12),rgba(255,215,0,0.08));border-radius:15px;padding:0.8rem;margin:1rem auto;text-align:center;border:1px dashed var(--primary);max-width:1600px}
+        .ad-smartlink a{display:inline-block;background:var(--primary);color:#fff;padding:0.6rem 1.5rem;border-radius:50px;text-decoration:none;font-weight:bold}
+        .movies-section{max-width:1600px;margin:0 auto;padding:1rem}
+        .section-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:1.2rem}
+        .section-title{font-size:1.3rem;font-weight:800;display:flex;align-items:center;gap:0.5rem}
+        @media(min-width:768px){.section-title{font-size:1.8rem}}
+        .movies-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:1rem}
+        @media(min-width:768px){.movies-grid{grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:1.5rem}}
+        .movie-card{position:relative;border-radius:15px;overflow:hidden;cursor:pointer;transition:transform 0.2s,box-shadow 0.2s;background:var(--bg-card);border:1px solid rgba(255,255,255,0.08);text-decoration:none;color:inherit;display:block}
+        .movie-card:hover{transform:translateY(-5px) scale(1.02);box-shadow:var(--shadow-xl)}
+        .movie-poster{position:relative;width:100%;padding-top:150%;overflow:hidden}
+        .movie-poster img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover}
+        .movie-rating,.movie-year,.movie-badge{position:absolute;background:rgba(0,0,0,0.8);padding:0.15rem 0.5rem;border-radius:15px;font-size:0.6rem;z-index:2}
+        .movie-rating{top:8px;right:8px;color:var(--secondary)}
+        .movie-year{bottom:8px;left:8px}
+        .movie-badge{top:8px;left:8px;background:var(--primary)}
+        .movie-actions{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(0deg,rgba(0,0,0,0.9),transparent);padding:0.6rem;display:flex;justify-content:center;gap:0.3rem;transform:translateY(100%);transition:transform 0.2s}
+        .movie-card:hover .movie-actions{transform:translateY(0)}
+        .movie-action-btn{background:rgba(229,9,20,0.9);border:none;color:#fff;padding:0.3rem 0.6rem;border-radius:15px;cursor:pointer;font-size:0.65rem}
+        .movie-info{padding:0.6rem}
+        .movie-title{font-size:0.8rem;font-weight:bold;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+        .scroll-top{position:fixed;bottom:20px;left:20px;width:40px;height:40px;background:var(--primary);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;opacity:0;visibility:hidden;transition:0.2s;z-index:1000}
+        .scroll-top.show{opacity:1;visibility:visible}
+        .toast-notification{position:fixed;bottom:20px;right:20px;background:linear-gradient(135deg,var(--primary),var(--primary-light));color:#fff;padding:0.8rem 1.2rem;border-radius:15px;z-index:4000;display:none;font-size:0.8rem}
+        footer{text-align:center;padding:1.5rem;border-top:1px solid rgba(255,255,255,0.05);margin-top:2rem;color:var(--text-secondary);font-size:0.7rem}
+        .hashtag-section{background:rgba(229,9,20,0.1);border-radius:30px;padding:10px;margin-top:20px;font-size:0.8rem}
+        .no-results{text-align:center;padding:3rem;grid-column:1/-1}
+        @media (prefers-reduced-motion:reduce){*{animation-duration:0.01ms!important;transition-duration:0.01ms!important}}
+        img{content-visibility:auto}
     </style>
+    
+    <!-- JSON-LD Structured Data (Schema.org) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "سينما فور يو | Cinema4You",
+      "url": "https://cinema4you.example.com",
+      "description": "منصة مجانية لمشاهدة وتحميل الأفلام العالمية والعربية بجودة عالية",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://cinema4you.example.com/?search={search_term_string}",
+        "query-input": "required name=search_term_string"
+      },
+      "inLanguage": "ar"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "itemListElement": [
+        {"@type": "Movie","name": "القط ذو الحذاء: الأمنية الأخيرة","datePublished": "2022"},
+        {"@type": "Movie","name": "سحر الأقدار","datePublished": "2024"},
+        {"@type": "Movie","name": "شمشون: نهاية العالم","datePublished": "2024"}
+      ],
+      "numberOfItems": 31
+    }
+    </script>
 </head>
 <body class="dark-mode" dir="rtl">
     <div class="particle-container" id="particleContainer"></div>
-
-    <header id="header">
+    <header>
         <div class="header-content">
-            <div class="logo" id="logoRefresh">
-                <div class="logo-icon"><span>C</span></div>
-                <span class="logo-text" id="logoText">سينما فور يو</span>
-            </div>
-            <div class="search-wrapper"><div class="search-box"><input type="text" id="searchInput" placeholder="🔍 ابحث عن فيلم..."><button id="searchBtn"><i class="fas fa-search"></i></button></div></div>
+            <div class="logo" id="logoRefresh"><div class="logo-icon"><span>C</span></div><span class="logo-text" id="logoText">سينما فور يو</span></div>
+            <div class="search-wrapper"><div class="search-box"><input type="text" id="searchInput" placeholder="🔍 ابحث عن فيلم..."><button id="searchBtn" aria-label="بحث"><i class="fas fa-search"></i></button></div></div>
             <div class="nav-tabs"><button class="nav-tab active" data-page="home" id="homeTab"><i class="fas fa-home"></i> <span>الرئيسية</span></button><button class="nav-tab" data-page="favorites" id="favTab"><i class="fas fa-heart"></i> <span>مفضلاتي</span></button><button class="nav-tab" data-page="watchlist" id="watchlistTab"><i class="fas fa-clock"></i> <span>للمشاهدة لاحقاً</span></button><button class="nav-tab" data-page="watched" id="watchedTab"><i class="fas fa-check-circle"></i> <span>تم مشاهدتها</span></button></div>
-            <div class="action-buttons"><div class="visitor-counter"><i class="fas fa-eye"></i><span class="visitor-count" id="visitorCount">0</span><span id="visitorText"> زائر</span></div><div class="lang-btn" id="langToggle"><i class="fas fa-globe"></i> <span id="langText">English</span></div><div class="icon-btn" id="themeToggle"><i class="fas fa-moon"></i></div><div class="icon-btn" id="fullscreenBtn"><i class="fas fa-expand"></i></div></div>
+            <div class="action-buttons"><div class="visitor-counter"><i class="fas fa-eye"></i><span class="visitor-count" id="visitorCount">0</span><span id="visitorText"> زائر</span></div><div class="icon-btn" id="langToggle" aria-label="تبديل اللغة"><i class="fas fa-globe"></i> <span id="langText">English</span></div><div class="icon-btn" id="themeToggle" aria-label="الوضع الليلي"><i class="fas fa-moon"></i></div><div class="icon-btn" id="fullscreenBtn" aria-label="شاشة كاملة"><i class="fas fa-expand"></i></div></div>
         </div>
     </header>
     
     <div class="categories-wrapper"><div class="categories" id="categories"></div></div>
     
-    <div class="ad-smartlink" style="max-width: 1600px; margin: 0 auto 1rem auto; width: calc(100% - 2rem);">
+    <div class="ad-smartlink">
         <span class="ad-label" id="adLabel"><i class="fas fa-gem"></i> عروض حصرية</span>
-        <a href="https://www.profitablecpmratenetwork.com/rr08mui1?key=5b454e06e46f4c2f09c7c90f5bc6b011" target="_blank" rel="nofollow noopener sponsored" id="smartlinkAd">
-            <i class="fas fa-ticket-alt"></i> <span id="adText">احصل على عروض خاصة - اضغط هنا</span> <i class="fas fa-arrow-left" id="adArrow"></i>
-        </a>
+        <a href="https://www.profitablecpmratenetwork.com/rr08mui1?key=5b454e06e46f4c2f09c7c90f5bc6b011" target="_blank" rel="nofollow noopener sponsored" id="smartlinkAd"><i class="fas fa-ticket-alt"></i> <span id="adText">احصل على عروض خاصة - اضغط هنا</span> <i class="fas fa-arrow-left" id="adArrow"></i></a>
     </div>
     
     <section class="movies-section"><div class="section-header"><h2 class="section-title" id="sectionTitle"><i class="fas fa-fire"></i> أحدث الإصدارات</h2><div class="view-all" id="viewAllBtn" style="color: var(--primary); cursor: pointer;"><span id="viewAllText">عرض الكل</span> <i class="fas fa-arrow-left" id="viewAllArrow"></i></div></div><div class="movies-grid" id="moviesGrid"></div></section>
     
-    <div class="social-bar-container">
-        <div class="ad-native-title" id="socialTitle"><i class="fas fa-share-alt"></i> تابعنا</div>
-        <script src="https://pl29118844.profitablecpmratenetwork.com/70/53/d7/7053d7184b65d041db0a1f588235ff89.js"></script>
-    </div>
+    <div class="social-bar-container" style="max-width:1600px;margin:1rem auto 0;border-radius:15px;overflow:hidden"><div class="ad-native-title" id="socialTitle"><i class="fas fa-share-alt"></i> تابعنا</div><script src="https://pl29118844.profitablecpmratenetwork.com/70/53/d7/7053d7184b65d041db0a1f588235ff89.js" defer></script></div>
     
     <footer><p id="footerText"><i class="fas fa-film"></i> سينما فور يو | Cinema4You - منصة مجانية لمشاهدة وتحميل الأفلام بجودة عالية</p><div class="hashtag-section" id="hashtagSection"><i class="fab fa-twitter"></i> #سينما_فور_يو #Cinema4You #افلام_انميشن #ديزني #بيكسار #دريم_ووركس #افلام_2025 <i class="fas fa-tags"></i></div><p id="copyright">© 2025 سينما فور يو - جميع الحقوق محفوظة</p></footer>
     
     <div class="scroll-top" id="scrollTop"><i class="fas fa-arrow-up"></i></div>
     <div class="toast-notification" id="toast"></div>
 
-    <script>
-        // ========== Popunder ==========
-        (function() {
-            let popunderExecuted = false;
-            const popunderUrl = "https://www.profitablecpmratenetwork.com/rr08mui1?key=5b454e06e46f4c2f09c7c90f5bc6b011";
-            function executePopunder() {
-                if (popunderExecuted) return;
-                popunderExecuted = true;
-                try {
-                    let popunderWindow = window.open(popunderUrl, '_blank');
-                    if (popunderWindow) popunderWindow.blur();
-                    window.focus();
-                } catch(e) { window.location.href = popunderUrl; }
-            }
-            document.body.addEventListener('click', function(e) {
-                if (e.target.closest('.movie-card, .movie-action-btn, .cat-btn, .nav-tab, #viewAllBtn') && !popunderExecuted) {
-                    executePopunder();
-                }
-            });
-        })();
-        
-        // ========== ALL MOVIES (Original 11 + New 20 Animation = 31 Movies) ==========
+    <script defer>
+        // ========== MOVIE DATABASE (31 Films) ==========
         const movies = [
-            // === ORIGINAL MOVIES (11 films) ===
-            { id: 1, titleAr: "القط ذو الحذاء: الأمنية الأخيرة", titleEn: "Puss in Boots: The Last Wish", file: "puss-in-boots.html", year: 2022, rating: 9.2, category: "animation", categoryAr: "أنميشن", poster: "https://upload.wikimedia.org/wikipedia/ar/0/06/Puss_in_Boots_The_Last_Wish.jpeg" },
-            { id: 2, titleAr: "سحر الأقدار", titleEn: "Spellbound", file: "spellbound.html", year: 2024, rating: 8.5, category: "animation", categoryAr: "أنميشن", poster: "https://m.media-amazon.com/images/M/MV5BYTU4NWFlMjEtZGFhMi00NzkxLWJkODQtOWExNDQ2NGVjM2RjXkEyXkFqcGc@._V1_.jpg" },
-            { id: 3, titleAr: "شمشون: نهاية العالم", titleEn: "Samson", file: "samson.html", year: 2024, rating: 9.3, category: "scifi", categoryAr: "خيال علمي", poster: "https://upload.wikimedia.org/wikipedia/en/1/15/Plankton_The_Movie_poster.jpg" },
-            { id: 4, titleAr: "سبونج بوب: الهولندي الطائر", titleEn: "SpongeBob", file: "spongebob.html", year: 2025, rating: 9.4, category: "animation", categoryAr: "أنميشن", poster: "https://rricoid-assets.obs.ap-southeast-4.myhuaweicloud.com/berita/Denpasar/o/1766129140956-the_spongebob_movie__search_for_squarepants_by_dbozartist_dh84eez-fullview/e2n06i60ikxs14u.jpeg" },
-            { id: 5, titleAr: "الماعز: رحلة الأحلام", titleEn: "Mooz", file: "mooz.html", year: 2026, rating: 9.2, category: "animation", categoryAr: "أنميشن", poster: "https://upload.wikimedia.org/wikipedia/ar/b/be/%D9%85%D9%84%D8%B5%D9%82_%D9%81%D9%84%D9%85_%D8%A7%D9%84%D9%85%D8%A7%D8%B9%D8%B2.jpg" },
-            { id: 6, titleAr: "زوتوبيا 2", titleEn: "Zootopia 2", file: "zootopia2.html", year: 2026, rating: 9.5, category: "animation", categoryAr: "أنميشن", poster: "https://ksa.grandcinemasme.com/Media/resized-0a55f5e1-f2e0-432f-a78a-426b668020ce.jpg" },
-            { id: 7, titleAr: "الهجرة الكبرى", titleEn: "Migration", file: "migration.html", year: 2023, rating: 8.4, category: "animation", categoryAr: "أنميشن", poster: "https://m.media-amazon.com/images/M/MV5BYjdlYWJjZTctODViZS00ODVlLTljOTEtOTZhYWZhZTRkZDM1XkEyXkFqcGc@._V1_.jpg" },
-            { id: 8, titleAr: "السنافر: جزيرة الكنز", titleEn: "Smurfs", file: "smurfs.html", year: 2025, rating: 8.7, category: "animation", categoryAr: "أنميشن", poster: "https://upload.wikimedia.org/wikipedia/ar/c/c5/%D9%85%D9%84%D8%B5%D9%82_%D9%81%D9%8A%D9%84%D9%85_%D8%A7%D9%84%D8%B3%D9%86%D8%A7%D9%81%D8%B1.png" },
-            { id: 9, titleAr: "موانا 2", titleEn: "Moana 2", file: "moana2.html", year: 2024, rating: 9.0, category: "animation", categoryAr: "أنميشن", poster: "https://upload.wikimedia.org/wikipedia/ar/2/20/%D8%BA%D9%84%D8%A7%D9%81_%D9%81%D9%8A%D9%84%D9%85_%D9%85%D9%88%D8%A7%D9%86%D8%A7_2.png" },
-            { id: 10, titleAr: "سحلية ليو", titleEn: "Leo", file: "leo.html", year: 2023, rating: 8.8, category: "animation", categoryAr: "أنميشن", poster: "https://i.imgur.com/24fvjjA.jpg" },
-            { id: 11, titleAr: "سوبر ماريو: الفيلم", titleEn: "The Super Mario Bros. Movie", file: "mario.html", year: 2023, rating: 9.1, category: "animation", categoryAr: "أنميشن", poster: "https://cimanow.cc/wp-content/uploads/2023/05/%D9%81%D9%8A%D9%84%D9%85-The-Super-Mario-Bros.-Movie-2023-%D9%85%D8%AA%D8%B1%D8%AC%D9%85.jpg" },
-    ]
-
-        // Language data
-        const langData = {
-            ar: {
-                logoText: "سينما فور يو",
-                homeTab: "الرئيسية",
-                favTab: "مفضلاتي",
-                watchlistTab: "للمشاهدة لاحقاً",
-                watchedTab: "تم مشاهدتها",
-                visitorText: "زائر",
-                langText: "English",
-                searchPlaceholder: "🔍 ابحث عن فيلم...",
-                sectionTitle: "أحدث الإصدارات",
-                viewAllText: "عرض الكل",
-                adLabel: "عروض حصرية",
-                adText: "احصل على عروض خاصة - اضغط هنا",
-                socialTitle: "تابعنا",
-                footerText: "سينما فور يو | Cinema4You - منصة مجانية لمشاهدة وتحميل الأفلام بجودة عالية",
-                copyright: "© 2025 سينما فور يو - جميع الحقوق محفوظة",
-                hashtags: "#سينما_فور_يو #Cinema4You #افلام_انميشن #ديزني #بيكسار #دريم_ووركس #افلام_2025",
-                categories: {
-                    all: "🎬 الكل",
-                    animation: "🎨 أنميشن",
-                    scifi: "🚀 خيال علمي"
-                },
-                toastAddedFav: "✅ أُضيف إلى المفضلة",
-                toastRemovedFav: "❌ أُزيل من المفضلة",
-                toastAddedWatch: "⏰ أُضيف للمشاهدة لاحقاً",
-                toastRemovedWatch: "❌ أُزيل",
-                toastWatched: "🎬 تم تسجيل الفيلم كمشاهد",
-                noResults: "😢 لا توجد أفلام مطابقة"
-            },
-            en: {
-                logoText: "Cinema4You",
-                homeTab: "Home",
-                favTab: "Favorites",
-                watchlistTab: "Watch Later",
-                watchedTab: "Watched",
-                visitorText: "visitors",
-                langText: "العربية",
-                searchPlaceholder: "🔍 Search movies...",
-                sectionTitle: "Latest Releases",
-                viewAllText: "View All",
-                adLabel: "Exclusive Offers",
-                adText: "Get Special Offers - Click Here",
-                socialTitle: "Follow Us",
-                footerText: "Cinema4You | Free platform to watch and download movies in high quality",
-                copyright: "© 2025 Cinema4You - All Rights Reserved",
-                hashtags: "#Cinema4You #AnimationMovies #Disney #Pixar #DreamWorks",
-                categories: {
-                    all: "🎬 All",
-                    animation: "🎨 Animation",
-                    scifi: "🚀 Sci-Fi"
-                },
-                toastAddedFav: "✅ Added to favorites",
-                toastRemovedFav: "❌ Removed from favorites",
-                toastAddedWatch: "⏰ Added to watch later",
-                toastRemovedWatch: "❌ Removed",
-                toastWatched: "🎬 Marked as watched",
-                noResults: "😢 No movies found"
-            }
-        };
-
+            { id:1, titleAr:"القط ذو الحذاء: الأمنية الأخيرة", titleEn:"Puss in Boots: The Last Wish", file:"puss-in-boots.html", year:2022, rating:9.2, category:"animation", categoryAr:"أنميشن", poster:"https://upload.wikimedia.org/wikipedia/ar/0/06/Puss_in_Boots_The_Last_Wish.jpeg" },
+            { id:2, titleAr:"سحر الأقدار", titleEn:"Spellbound", file:"spellbound.html", year:2024, rating:8.5, category:"animation", categoryAr:"أنميشن", poster:"https://m.media-amazon.com/images/M/MV5BYTU4NWFlMjEtZGFhMi00NzkxLWJkODQtOWExNDQ2NGVjM2RjXkEyXkFqcGc@._V1_.jpg" },
+            { id:3, titleAr:"شمشون: نهاية العالم", titleEn:"Samson", file:"samson.html", year:2024, rating:9.3, category:"scifi", categoryAr:"خيال علمي", poster:"https://upload.wikimedia.org/wikipedia/en/1/15/Plankton_The_Movie_poster.jpg" },
+            { id:4, titleAr:"سبونج بوب: الهولندي الطائر", titleEn:"SpongeBob", file:"spongebob.html", year:2025, rating:9.4, category:"animation", categoryAr:"أنميشن", poster:"https://rricoid-assets.obs.ap-southeast-4.myhuaweicloud.com/berita/Denpasar/o/1766129140956-the_spongebob_movie__search_for_squarepants_by_dbozartist_dh84eez-fullview/e2n06i60ikxs14u.jpeg" },
+            { id:5, titleAr:"الماعز: رحلة الأحلام", titleEn:"Mooz", file:"mooz.html", year:2026, rating:9.2, category:"animation", categoryAr:"أنميشن", poster:"https://upload.wikimedia.org/wikipedia/ar/b/be/%D9%85%D9%84%D8%B5%D9%82_%D9%81%D9%84%D9%85_%D8%A7%D9%84%D9%85%D8%A7%D8%B9%D8%B2.jpg" },
+            { id:6, titleAr:"زوتوبيا 2", titleEn:"Zootopia 2", file:"zootopia2.html", year:2026, rating:9.5, category:"animation", categoryAr:"أنميشن", poster:"https://ksa.grandcinemasme.com/Media/resized-0a55f5e1-f2e0-432f-a78a-426b668020ce.jpg" },
+            { id:7, titleAr:"الهجرة الكبرى", titleEn:"Migration", file:"migration.html", year:2023, rating:8.4, category:"animation", categoryAr:"أنميشن", poster:"https://m.media-amazon.com/images/M/MV5BYjdlYWJjZTctODViZS00ODVlLTljOTEtOTZhYWZhZTRkZDM1XkEyXkFqcGc@._V1_.jpg" },
+            { id:8, titleAr:"السنافر: جزيرة الكنز", titleEn:"Smurfs", file:"smurfs.html", year:2025, rating:8.7, category:"animation", categoryAr:"أنميشن", poster:"https://upload.wikimedia.org/wikipedia/ar/c/c5/%D9%85%D9%84%D8%B5%D9%82_%D9%81%D9%8A%D9%84%D9%85_%D8%A7%D9%84%D8%B3%D9%86%D8%A7%D9%81%D8%B1.png" },
+            { id:9, titleAr:"موانا 2", titleEn:"Moana 2", file:"moana2.html", year:2024, rating:9.0, category:"animation", categoryAr:"أنميشن", poster:"https://upload.wikimedia.org/wikipedia/ar/2/20/%D8%BA%D9%84%D8%A7%D9%81_%D9%81%D9%8A%D9%84%D9%85_%D9%85%D9%88%D8%A7%D9%86%D8%A7_2.png" },
+            { id:10, titleAr:"سحلية ليو", titleEn:"Leo", file:"leo.html", year:2023, rating:8.8, category:"animation", categoryAr:"أنميشن", poster:"https://i.imgur.com/24fvjjA.jpg" },
+            { id:11, titleAr:"سوبر ماريو: الفيلم", titleEn:"The Super Mario Bros. Movie", file:"mario.html", year:2023, rating:9.1, category:"animation", categoryAr:"أنميشن", poster:"https://cimanow.cc/wp-content/uploads/2023/05/%D9%81%D9%8A%D9%84%D9%85-The-Super-Mario-Bros.-Movie-2023-%D9%85%D8%AA%D8%B1%D8%AC%D9%85.jpg" },
+            { id:12, titleAr:"الأسد الملك", titleEn:"The Lion King", file:"lion-king.html", year:1994, rating:9.3, category:"animation", categoryAr:"أنميشن", poster:"https://www.animationmagazine.net/wordpress/wp-content/uploads/Lion-King-3D-poster.jpg" },
+            { id:13, titleAr:"فروزن", titleEn:"Frozen", file:"frozen.html", year:2013, rating:8.9, category:"animation", categoryAr:"أنميشن", poster:"https://cimanow.cc/wp-content/uploads/2019/08/%D9%81%D9%8A%D9%84%D9%85-Frozen-2013-%D9%85%D8%AA%D8%B1%D8%AC%D9%85.jpg" },
+            { id:14, titleAr:"توي ستوري", titleEn:"Toy Story", file:"toy-story.html", year:1995, rating:9.1, category:"animation", categoryAr:"أنميشن", poster:"https://m.media-amazon.com/images/M/MV5BZTA3OWVjOWItNjE1NS00NzZiLWE1MjgtZDZhMWI1ZTlkNzYwXkEyXkFqcGc@._V1_.jpg" },
+            { id:15, titleAr:"الخارقون", titleEn:"The Incredibles", file:"incredibles.html", year:2004, rating:9.0, category:"animation", categoryAr:"أنميشن", poster:"https://m.arabseed.show/wp-content/uploads/2020/05/5d8ca64f0fb1b-182872-475x713.webp" },
+            { id:16, titleAr:"شركة الوحوش", titleEn:"Monsters, Inc.", file:"monsters-inc.html", year:2001, rating:8.9, category:"animation", categoryAr:"أنميشن", poster:"https://lumiere-a.akamaihd.net/v1/images/p_monstersinc_19751_55afa07a.jpeg" },
+            { id:17, titleAr:"البحث عن نيمو", titleEn:"Finding Nemo", file:"finding-nemo.html", year:2003, rating:9.0, category:"animation", categoryAr:"أنميشن", poster:"https://i.namu.wiki/i/YhKajpdz3X7Y1BAmnpW2D5gbECETS4TtnRJqdgUf127BrxHZRbCsepnyXhrr9i00ep4lV6mf4Kb3saR6DWKD9g.webp" },
+            { id:18, titleAr:"راتاتوي", titleEn:"Ratatouille", file:"ratatouille.html", year:2007, rating:9.1, category:"animation", categoryAr:"أنميشن", poster:"https://image.tmdb.org/t/p/w500/npHNjldbeTHdKKw28bJKs7lzqzj.jpg" },
+            { id:19, titleAr:"آب", titleEn:"Up", file:"up.html", year:2009, rating:9.2, category:"animation", categoryAr:"أنميشن", poster:"https://media2.cimanow.cc/wp-content/uploads/2020/05/%D9%81%D9%8A%D9%84%D9%85-Up-2009-%D9%85%D8%AF%D8%A8%D9%84%D8%AC-%D9%83%D9%84%D9%8A%D9%86.jpg" },
+            { id:20, titleAr:"داخل الرأس", titleEn:"Inside Out", file:"inside-out.html", year:2015, rating:9.1, category:"animation", categoryAr:"أنميشن", poster:"https://m.media-amazon.com/images/M/MV5BOTgxMDQwMDk0OF5BMl5BanBnXkFtZTgwNjU5OTg2NDE@._V1_.jpg" },
+            { id:21, titleAr:"كوكو", titleEn:"Coco", file:"coco.html", year:2017, rating:9.3, category:"animation", categoryAr:"أنميشن", poster:"https://image.tmdb.org/t/p/w500/gGEsBPAijhVUFoiNpgZXqRVWJt2.jpg" },
+            { id:22, titleAr:"كيف تتدرب على تنينك", titleEn:"How to Train Your Dragon", file:"how-to-train-your-dragon.html", year:2010, rating:9.2, category:"animation", categoryAr:"أنميشن", poster:"https://image.tmdb.org/t/p/w500/ygGmAO60t8GyqUo9xYeYxSZAR3b.jpg" },
+            { id:23, titleAr:"مدغشقر", titleEn:"Madagascar", file:"madagascar.html", year:2005, rating:8.8, category:"animation", categoryAr:"أنميشن", poster:"https://media0101.elcinema.com/uploads/_315x420_f3d05fad420f07dac37cbd3e6060afd56007e5ea61cf61be6a1fc1d73c9f435c.jpg" },
+            { id:24, titleAr:"كونغ فو باندا", titleEn:"Kung Fu Panda", file:"kung-fu-panda.html", year:2008, rating:9.0, category:"animation", categoryAr:"أنميشن", poster:"https://m.media-amazon.com/images/M/MV5BZDU5MDNiMGItYjVmZi00NDUxLTg2OTktNGE0NzNlNzM4NzgyXkEyXkFqcGc@._V1_.jpg" },
+            { id:25, titleAr:"شريك", titleEn:"Shrek", file:"shrek.html", year:2001, rating:9.1, category:"animation", categoryAr:"أنميشن", poster:"https://m.media-amazon.com/images/M/MV5BN2FkMTRkNTUtYTI0NC00ZjI4LWI5MzUtMDFmOGY0NmU2OGY1XkEyXkFqcGc@._V1_.jpg" },
+            { id:26, titleAr:"الأبطال الستة", titleEn:"Big Hero 6", file:"big-hero-6.html", year:2014, rating:8.9, category:"animation", categoryAr:"أنميشن", poster:"https://m.media-amazon.com/images/M/MV5BYzVlYmJiMzItZmY4Yy00YTAxLTlkNjUtNzdkMjQ1OTM3NTM1XkEyXkFqcGc@._V1_.jpg" },
+            { id:27, titleAr:"زوتروبيا", titleEn:"Zootopia", file:"zootopia.html", year:2016, rating:9.1, category:"animation", categoryAr:"أنميشن", poster:"https://media0101.elcinema.com/uploads/_320x_13f10afd86d06bedee71bef4f5f14268e6be3f3a5bea48f1bd7564dcfda12433.jpg" },
+            { id:28, titleAr:"موآنا", titleEn:"Moana", file:"moana.html", year:2016, rating:9.0, category:"animation", categoryAr:"أنميشن", poster:"https://play-lh.googleusercontent.com/U0xAVToGCtR6yxMvMl-DIkHBVlCZoDvJGJaTYWQ1UKyaRYhU66RGXGyQhlNKtJoGZeCZ" },
+            { id:29, titleAr:"عائلة روبنسون", titleEn:"Meet the Robinsons", file:"meet-the-robinsons.html", year:2007, rating:8.3, category:"animation", categoryAr:"أنميشن", poster:"https://media0101.elcinema.com/uploads/_320x_6e53d3f9c43066ebc13cd8a9ea054d5b434e06cfa99555e19b1b9ffca5c391f7.jpg" },
+            { id:30, titleAr:"الأميرة والضفدع", titleEn:"The Princess and the Frog", file:"princess-frog.html", year:2009, rating:8.6, category:"animation", categoryAr:"أنميشن", poster:"https://lumiere-a.akamaihd.net/v1/images/p_theprincessandthefrog_20499_1c5f55a1.jpeg" },
+            { id:31, titleAr:"القط ذو الحذاء", titleEn:"Puss in Boots", file:"puss-in-boots-2011.html", year:2011, rating:8.7, category:"animation", categoryAr:"أنميشن", poster:"https://m.arabseed.show/wp-content/uploads/2021/09/%D9%81%D9%8A%D9%84%D9%85-%D9%82%D8%B7%D8%B7-%D8%AA%D8%B1%D8%AA%D8%AF%D9%8A-%D8%A7%D8%AD%D8%B0%D9%8A%D8%A9-Puss-in-Boots-2011-%D9%85%D8%AF%D8%A8%D9%84%D8%AC.jpg" }
+        ];
+        
         let currentLang = localStorage.getItem('cinema4you_lang') || 'ar';
         let userData = { favorites: [], watchlist: [], watched: [] };
+        let currentCategory = "all", currentSearch = "", currentPage = "home";
         
-        function loadUserData() { const saved = localStorage.getItem('cinema4you_userData'); if (saved) userData = JSON.parse(saved); }
-        function saveUserData() { localStorage.setItem('cinema4you_userData', JSON.stringify(userData)); }
+        const langData = {
+            ar: { logoText:"سينما فور يو", homeTab:"الرئيسية", favTab:"مفضلاتي", watchlistTab:"للمشاهدة لاحقاً", watchedTab:"تم مشاهدتها", visitorText:"زائر", langText:"English", searchPlaceholder:"🔍 ابحث عن فيلم...", sectionTitle:"أحدث الإصدارات", viewAllText:"عرض الكل", adLabel:"عروض حصرية", adText:"احصل على عروض خاصة - اضغط هنا", socialTitle:"تابعنا", footerText:"سينما فور يو | Cinema4You - منصة مجانية لمشاهدة وتحميل الأفلام بجودة عالية", copyright:"© 2025 سينما فور يو - جميع الحقوق محفوظة", hashtags:"#سينما_فور_يو #Cinema4You #افلام_انميشن #ديزني #بيكسار #دريم_ووركس #افلام_2025", categories:{ all:"🎬 الكل", animation:"🎨 أنميشن", scifi:"🚀 خيال علمي" }, toastAddedFav:"✅ أُضيف إلى المفضلة", toastRemovedFav:"❌ أُزيل من المفضلة", toastAddedWatch:"⏰ أُضيف للمشاهدة لاحقاً", toastRemovedWatch:"❌ أُزيل", toastWatched:"🎬 تم تسجيل الفيلم كمشاهد", noResults:"😢 لا توجد أفلام مطابقة" },
+            en: { logoText:"Cinema4You", homeTab:"Home", favTab:"Favorites", watchlistTab:"Watch Later", watchedTab:"Watched", visitorText:"visitors", langText:"العربية", searchPlaceholder:"🔍 Search movies...", sectionTitle:"Latest Releases", viewAllText:"View All", adLabel:"Exclusive Offers", adText:"Get Special Offers - Click Here", socialTitle:"Follow Us", footerText:"Cinema4You | Free platform to watch and download movies in high quality", copyright:"© 2025 Cinema4You - All Rights Reserved", hashtags:"#Cinema4You #AnimationMovies #Disney #Pixar #DreamWorks", categories:{ all:"🎬 All", animation:"🎨 Animation", scifi:"🚀 Sci-Fi" }, toastAddedFav:"✅ Added to favorites", toastRemovedFav:"❌ Removed", toastAddedWatch:"⏰ Added to watch later", toastRemovedWatch:"❌ Removed", toastWatched:"🎬 Marked as watched", noResults:"😢 No movies found" }
+        };
         
-        function updateLanguage() {
-            const data = langData[currentLang];
-            document.getElementById('logoText').textContent = data.logoText;
-            document.getElementById('homeTab').querySelector('span').textContent = data.homeTab;
-            document.getElementById('favTab').querySelector('span').textContent = data.favTab;
-            document.getElementById('watchlistTab').querySelector('span').textContent = data.watchlistTab;
-            document.getElementById('watchedTab').querySelector('span').textContent = data.watchedTab;
-            document.getElementById('visitorText').textContent = data.visitorText;
-            document.getElementById('langText').textContent = data.langText;
-            document.getElementById('searchInput').placeholder = data.searchPlaceholder;
-            document.getElementById('sectionTitle').innerHTML = `<i class="fas fa-fire"></i> ${data.sectionTitle}`;
-            document.getElementById('viewAllText').textContent = data.viewAllText;
-            document.getElementById('adLabel').innerHTML = `<i class="fas fa-gem"></i> ${data.adLabel}`;
-            document.getElementById('adText').textContent = data.adText;
-            document.getElementById('socialTitle').innerHTML = `<i class="fas fa-share-alt"></i> ${data.socialTitle}`;
-            document.getElementById('footerText').innerHTML = `<i class="fas fa-film"></i> ${data.footerText}`;
-            document.getElementById('copyright').textContent = data.copyright;
-            document.getElementById('hashtagSection').innerHTML = `<i class="fab fa-twitter"></i> ${data.hashtags} <i class="fas fa-tags"></i>`;
-            
-            // Update categories
-            const categoriesContainer = document.getElementById('categories');
-            categoriesContainer.innerHTML = `
-                <button class="cat-btn active" data-cat="all">${data.categories.all}</button>
-                <button class="cat-btn" data-cat="animation">${data.categories.animation}</button>
-                <button class="cat-btn" data-cat="scifi">${data.categories.scifi}</button>
-            `;
-            
-            // Re-attach category event listeners
-            document.querySelectorAll(".cat-btn").forEach(btn => {
-                btn.addEventListener("click", () => {
-                    if (currentPage !== "home") {
-                        currentPage = "home";
-                        document.querySelectorAll(".nav-tab").forEach(t => t.classList.remove("active"));
-                        document.querySelector('.nav-tab[data-page="home"]').classList.add("active");
-                    }
-                    document.querySelectorAll(".cat-btn").forEach(b => b.classList.remove("active"));
-                    btn.classList.add("active");
-                    currentCategory = btn.dataset.cat;
-                    filterMovies();
-                });
-            });
-            
+        function loadUserData(){ const s=localStorage.getItem('cinema4you_userData'); if(s) userData=JSON.parse(s); }
+        function saveUserData(){ localStorage.setItem('cinema4you_userData',JSON.stringify(userData)); }
+        function showToast(m){ const t=document.getElementById("toast"); t.textContent=m; t.style.display="block"; setTimeout(()=>t.style.display="none",2500); }
+        window.toggleFavorite=(id,e)=>{ e?.stopPropagation(); const d=langData[currentLang]; if(userData.favorites.includes(id)){ userData.favorites=userData.favorites.filter(i=>i!==id); showToast(d.toastRemovedFav); }else{ userData.favorites.push(id); showToast(d.toastAddedFav); } saveUserData(); renderMovies(); };
+        window.toggleWatchlist=(id,e)=>{ e?.stopPropagation(); const d=langData[currentLang]; if(userData.watchlist.includes(id)){ userData.watchlist=userData.watchlist.filter(i=>i!==id); showToast(d.toastRemovedWatch); }else{ userData.watchlist.push(id); showToast(d.toastAddedWatch); } saveUserData(); renderMovies(); };
+        window.markAsWatched=(id,e)=>{ e?.stopPropagation(); if(!userData.watched.includes(id)){ userData.watched.push(id); saveUserData(); showToast(langData[currentLang].toastWatched); } };
+        
+        function renderMovies(){
+            let filtered = [...movies];
+            if(currentPage==="favorites") filtered=filtered.filter(m=>userData.favorites.includes(m.id));
+            else if(currentPage==="watchlist") filtered=filtered.filter(m=>userData.watchlist.includes(m.id));
+            else if(currentPage==="watched") filtered=filtered.filter(m=>userData.watched.includes(m.id));
+            else{ if(currentCategory!=="all") filtered=filtered.filter(m=>m.category===currentCategory); if(currentSearch.trim()){ const s=currentSearch.toLowerCase(); filtered=filtered.filter(m=>m.titleAr.toLowerCase().includes(s)||m.titleEn.toLowerCase().includes(s)); } }
+            const grid=document.getElementById("moviesGrid");
+            if(filtered.length===0){ grid.innerHTML=`<div class="no-results">${langData[currentLang].noResults}</div>`; return; }
+            grid.innerHTML=filtered.map(m=>{ const title=currentLang==='ar'?m.titleAr:m.titleEn; const catName=currentLang==='ar'?m.categoryAr:(m.category==='animation'?'Animation':'Sci-Fi'); return `<a href="${m.file}" class="movie-card" data-id="${m.id}"><div class="movie-poster"><img src="${m.poster}" alt="${title}" loading="lazy" onerror="this.src='https://picsum.photos/300/450?grayscale'"><div class="movie-rating">⭐ ${m.rating}</div><div class="movie-year">📅 ${m.year}</div>${m.rating>=9.1?'<div class="movie-badge">🔥 Top Rated</div>':''}</div><div class="movie-actions"><button class="movie-action-btn" onclick="event.stopPropagation();window.markAsWatched(${m.id},event)"><i class="fas fa-check-circle"></i></button><button class="movie-action-btn" onclick="event.stopPropagation();window.toggleFavorite(${m.id},event)"><i class="fa-heart ${userData.favorites.includes(m.id)?'fas':'far'}"></i></button><button class="movie-action-btn" onclick="event.stopPropagation();window.toggleWatchlist(${m.id},event)"><i class="fa-clock ${userData.watchlist.includes(m.id)?'fas':'far'}"></i></button></div><div class="movie-info"><div class="movie-title">${title}</div><div class="movie-category">${catName}</div></div></a>`; }).join("");
+        }
+        
+        function updateLanguage(){
+            const d=langData[currentLang];
+            document.getElementById('logoText').innerText=d.logoText; document.getElementById('homeTab').querySelector('span').innerText=d.homeTab; document.getElementById('favTab').querySelector('span').innerText=d.favTab; document.getElementById('watchlistTab').querySelector('span').innerText=d.watchlistTab; document.getElementById('watchedTab').querySelector('span').innerText=d.watchedTab; document.getElementById('visitorText').innerText=d.visitorText; document.getElementById('langText').innerText=d.langText; document.getElementById('searchInput').placeholder=d.searchPlaceholder; document.getElementById('sectionTitle').innerHTML=`<i class="fas fa-fire"></i> ${d.sectionTitle}`; document.getElementById('viewAllText').innerText=d.viewAllText; document.getElementById('adLabel').innerHTML=`<i class="fas fa-gem"></i> ${d.adLabel}`; document.getElementById('adText').innerText=d.adText; document.getElementById('socialTitle').innerHTML=`<i class="fas fa-share-alt"></i> ${d.socialTitle}`; document.getElementById('footerText').innerHTML=`<i class="fas fa-film"></i> ${d.footerText}`; document.getElementById('copyright').innerText=d.copyright; document.getElementById('hashtagSection').innerHTML=`<i class="fab fa-twitter"></i> ${d.hashtags} <i class="fas fa-tags"></i>`;
+            const cats=document.getElementById('categories'); cats.innerHTML=`<button class="cat-btn active" data-cat="all">${d.categories.all}</button><button class="cat-btn" data-cat="animation">${d.categories.animation}</button><button class="cat-btn" data-cat="scifi">${d.categories.scifi}</button>`;
+            document.querySelectorAll(".cat-btn").forEach(btn=>btn.addEventListener("click",()=>{ if(currentPage!=="home"){ currentPage="home"; document.querySelectorAll(".nav-tab").forEach(t=>t.classList.remove("active")); document.querySelector('.nav-tab[data-page="home"]').classList.add("active"); } document.querySelectorAll(".cat-btn").forEach(b=>b.classList.remove("active")); btn.classList.add("active"); currentCategory=btn.dataset.cat; renderMovies(); }));
             renderMovies();
         }
         
-        function toggleLanguage() {
-            currentLang = currentLang === 'ar' ? 'en' : 'ar';
-            localStorage.setItem('cinema4you_lang', currentLang);
-            document.body.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
-            document.documentElement.lang = currentLang === 'ar' ? 'ar' : 'en';
+        function init(){
+            loadUserData(); let visitors=localStorage.getItem('cinema4you_visitors')||1247; const last=localStorage.getItem('cinema4you_lastVisit'); const today=new Date().toDateString(); if(last!==today){ visitors=Number(visitors)+1; localStorage.setItem('cinema4you_visitors',visitors); localStorage.setItem('cinema4you_lastVisit',today); } document.getElementById('visitorCount').innerText=Number(visitors).toLocaleString();
+            document.querySelectorAll(".nav-tab").forEach(t=>t.addEventListener("click",()=>{ document.querySelectorAll(".nav-tab").forEach(tt=>tt.classList.remove("active")); t.classList.add("active"); currentPage=t.dataset.page; if(currentPage==="home"){ currentCategory="all"; document.querySelectorAll(".cat-btn").forEach(btn=>{ btn.classList.remove("active"); if(btn.dataset.cat==="all") btn.classList.add("active"); }); } currentSearch=""; document.getElementById("searchInput").value=""; renderMovies(); }));
+            document.getElementById("searchBtn").addEventListener("click",()=>{ if(currentPage!=="home"){ currentPage="home"; document.querySelectorAll(".nav-tab").forEach(t=>t.classList.remove("active")); document.querySelector('.nav-tab[data-page="home"]').classList.add("active"); currentCategory="all"; document.querySelectorAll(".cat-btn").forEach(btn=>{ btn.classList.remove("active"); if(btn.dataset.cat==="all") btn.classList.add("active"); }); } currentSearch=document.getElementById("searchInput").value; renderMovies(); });
+            document.getElementById("searchInput").addEventListener("keypress",e=>{ if(e.key==="Enter") document.getElementById("searchBtn").click(); });
+            document.getElementById("themeToggle").addEventListener("click",()=>{ document.body.classList.toggle('dark-mode'); document.body.classList.toggle('light-mode'); });
+            document.getElementById("fullscreenBtn").addEventListener("click",()=>{ if(!document.fullscreenElement) document.documentElement.requestFullscreen(); else document.exitFullscreen(); });
+            document.getElementById("scrollTop").addEventListener("click",()=>window.scrollTo({top:0,behavior:"smooth"}));
+            window.addEventListener("scroll",()=>document.getElementById("scrollTop").classList.toggle("show",window.scrollY>200));
+            document.getElementById("logoRefresh").addEventListener("click",()=>location.reload());
+            document.getElementById("viewAllBtn").addEventListener("click",()=>{ currentCategory="all"; document.querySelectorAll(".cat-btn").forEach(btn=>{ btn.classList.remove("active"); if(btn.dataset.cat==="all") btn.classList.add("active"); }); currentSearch=""; document.getElementById("searchInput").value=""; renderMovies(); window.scrollTo({top:600,behavior:"smooth"}); });
+            document.getElementById("langToggle").addEventListener("click",()=>{ currentLang=currentLang==='ar'?'en':'ar'; localStorage.setItem('cinema4you_lang',currentLang); document.body.dir=currentLang==='ar'?'rtl':'ltr'; updateLanguage(); });
+            for(let i=0;i<35;i++){ const p=document.createElement("div"); p.classList.add("particle"); p.style.width=`${Math.random()*4+2}px`; p.style.height=p.style.width; p.style.left=`${Math.random()*100}%`; p.style.animationDuration=`${Math.random()*12+8}s`; p.style.animationDelay=`${Math.random()*6}s`; document.getElementById("particleContainer").appendChild(p); }
             updateLanguage();
         }
-        
-        window.isFavorite = (id) => userData.favorites.includes(id);
-        window.isInWatchlist = (id) => userData.watchlist.includes(id);
-        window.isWatched = (id) => userData.watched.includes(id);
-        
-        function showToast(message) {
-            const toast = document.getElementById("toast");
-            toast.textContent = message;
-            toast.style.display = "block";
-            setTimeout(() => toast.style.display = "none", 2500);
-        }
-        
-        window.toggleFavorite = function(id, event) {
-            if(event) event.stopPropagation();
-            const data = langData[currentLang];
-            if (window.isFavorite(id)) {
-                userData.favorites = userData.favorites.filter(i => i !== id);
-                showToast(data.toastRemovedFav);
-            } else {
-                userData.favorites.push(id);
-                showToast(data.toastAddedFav);
-            }
-            saveUserData();
-            renderMovies();
-        };
-        
-        window.toggleWatchlist = function(id, event) {
-            if(event) event.stopPropagation();
-            const data = langData[currentLang];
-            if (window.isInWatchlist(id)) {
-                userData.watchlist = userData.watchlist.filter(i => i !== id);
-                showToast(data.toastRemovedWatch);
-            } else {
-                userData.watchlist.push(id);
-                showToast(data.toastAddedWatch);
-            }
-            saveUserData();
-            renderMovies();
-        };
-        
-        window.markAsWatched = function(id, event) {
-            if(event) event.stopPropagation();
-            if (!window.isWatched(id)) {
-                userData.watched.push(id);
-                saveUserData();
-                const data = langData[currentLang];
-                showToast(data.toastWatched);
-            }
-        };
-        
-        let visitors = localStorage.getItem('cinema4you_visitors');
-        if (!visitors) visitors = 1247;
-        visitors = parseInt(visitors);
-        const today = new Date().toDateString();
-        const lastVisit = localStorage.getItem('cinema4you_lastVisit');
-        if (lastVisit !== today) {
-            visitors++;
-            localStorage.setItem('cinema4you_visitors', visitors);
-            localStorage.setItem('cinema4you_lastVisit', today);
-        }
-        document.getElementById('visitorCount').textContent = visitors.toLocaleString();
-        
-        let currentCategory = "all";
-        let currentSearch = "";
-        let currentPage = "home";
-        const moviesGrid = document.getElementById("moviesGrid");
-        
-        function filterMovies() {
-            let filtered = [...movies];
-            if (currentPage === "favorites") filtered = filtered.filter(m => userData.favorites.includes(m.id));
-            else if (currentPage === "watchlist") filtered = filtered.filter(m => userData.watchlist.includes(m.id));
-            else if (currentPage === "watched") filtered = filtered.filter(m => userData.watched.includes(m.id));
-            else {
-                if (currentCategory !== "all") {
-                    filtered = filtered.filter(m => m.category === currentCategory);
-                }
-                if (currentSearch.trim()) {
-                    const searchLower = currentSearch.toLowerCase();
-                    filtered = filtered.filter(m => 
-                        m.titleAr.toLowerCase().includes(searchLower) || 
-                        m.titleEn.toLowerCase().includes(searchLower)
-                    );
-                }
-            }
-            renderMovies(filtered);
-        }
-        
-        function renderMovies(moviesToRender = null) {
-            const moviesList = moviesToRender || (() => {
-                let filtered = [...movies];
-                if (currentPage === "favorites") filtered = filtered.filter(m => userData.favorites.includes(m.id));
-                else if (currentPage === "watchlist") filtered = filtered.filter(m => userData.watchlist.includes(m.id));
-                else if (currentPage === "watched") filtered = filtered.filter(m => userData.watched.includes(m.id));
-                else {
-                    if (currentCategory !== "all") filtered = filtered.filter(m => m.category === currentCategory);
-                    if (currentSearch.trim()) {
-                        const searchLower = currentSearch.toLowerCase();
-                        filtered = filtered.filter(m => m.titleAr.toLowerCase().includes(searchLower) || m.titleEn.toLowerCase().includes(searchLower));
-                    }
-                }
-                return filtered;
-            })();
-            
-            const data = langData[currentLang];
-            if (moviesList.length === 0) {
-                moviesGrid.innerHTML = `<div class="no-results">${data.noResults}</div>`;
-                return;
-            }
-            
-            moviesGrid.innerHTML = moviesList.map(movie => {
-                const title = currentLang === 'ar' ? movie.titleAr : movie.titleEn;
-                const categoryName = currentLang === 'ar' ? movie.categoryAr : (movie.category === 'animation' ? 'Animation' : 'Sci-Fi');
-                return `
-                    <a href="${movie.file}" class="movie-card" data-id="${movie.id}">
-                        <div class="movie-poster">
-                            <img src="${movie.poster}" alt="${title}" onerror="this.src='https://picsum.photos/300/450?grayscale'">
-                            <div class="movie-rating">⭐ ${movie.rating}</div>
-                            <div class="movie-year">📅 ${movie.year}</div>
-                            ${movie.rating >= 9.1 ? '<div class="movie-badge">🔥 Top Rated</div>' : ''}
-                        </div>
-                        <div class="movie-actions">
-                            <button class="movie-action-btn" onclick="event.stopPropagation(); window.markAsWatched(${movie.id}, event)"><i class="fas fa-check-circle"></i></button>
-                            <button class="movie-action-btn" onclick="event.stopPropagation(); window.toggleFavorite(${movie.id}, event)"><i class="fa-heart ${window.isFavorite(movie.id) ? 'fas' : 'far'}"></i></button>
-                            <button class="movie-action-btn" onclick="event.stopPropagation(); window.toggleWatchlist(${movie.id}, event)"><i class="fa-clock ${window.isInWatchlist(movie.id) ? 'fas' : 'far'}"></i></button>
-                        </div>
-                        <div class="movie-info">
-                            <div class="movie-title">${title}</div>
-                            <div class="movie-category">${categoryName}</div>
-                        </div>
-                    </a>
-                `;
-            }).join("");
-        }
-        
-        document.querySelectorAll(".nav-tab").forEach(tab => {
-            tab.addEventListener("click", () => {
-                document.querySelectorAll(".nav-tab").forEach(t => t.classList.remove("active"));
-                tab.classList.add("active");
-                currentPage = tab.dataset.page;
-                if (currentPage === "home") {
-                    currentCategory = "all";
-                    document.querySelectorAll(".cat-btn").forEach(btn => {
-                        btn.classList.remove("active");
-                        if (btn.dataset.cat === "all") btn.classList.add("active");
-                    });
-                }
-                currentSearch = "";
-                document.getElementById("searchInput").value = "";
-                filterMovies();
-            });
-        });
-        
-        document.getElementById("searchBtn")?.addEventListener("click", () => {
-            if (currentPage !== "home") {
-                currentPage = "home";
-                document.querySelectorAll(".nav-tab").forEach(t => t.classList.remove("active"));
-                document.querySelector('.nav-tab[data-page="home"]').classList.add("active");
-                currentCategory = "all";
-                document.querySelectorAll(".cat-btn").forEach(btn => {
-                    btn.classList.remove("active");
-                    if (btn.dataset.cat === "all") btn.classList.add("active");
-                });
-            }
-            currentSearch = document.getElementById("searchInput").value;
-            filterMovies();
-        });
-        
-        document.getElementById("searchInput")?.addEventListener("keypress", e => { if (e.key === "Enter") document.getElementById("searchBtn").click(); });
-        document.getElementById("themeToggle")?.addEventListener("click", () => { document.body.classList.toggle('dark-mode'); document.body.classList.toggle('light-mode'); });
-        document.getElementById("fullscreenBtn")?.addEventListener("click", () => { if (!document.fullscreenElement) document.documentElement.requestFullscreen(); else document.exitFullscreen(); });
-        document.getElementById("scrollTop")?.addEventListener("click", () => { window.scrollTo({ top: 0, behavior: "smooth" }); });
-        window.addEventListener("scroll", () => { document.getElementById("scrollTop").classList.toggle("show", window.scrollY > 200); });
-        document.getElementById("logoRefresh")?.addEventListener("click", () => { location.reload(); });
-        document.getElementById("viewAllBtn")?.addEventListener("click", () => {
-            currentCategory = "all";
-            document.querySelectorAll(".cat-btn").forEach(btn => { btn.classList.remove("active"); if (btn.dataset.cat === "all") btn.classList.add("active"); });
-            currentSearch = "";
-            document.getElementById("searchInput").value = "";
-            filterMovies();
-            window.scrollTo({ top: 600, behavior: "smooth" });
-        });
-        document.getElementById("langToggle")?.addEventListener("click", toggleLanguage);
-        
-        function initParticles() {
-            const container = document.getElementById("particleContainer");
-            for (let i = 0; i < 50; i++) {
-                const p = document.createElement("div");
-                p.classList.add("particle");
-                p.style.width = `${Math.random() * 4 + 2}px`;
-                p.style.height = p.style.width;
-                p.style.left = `${Math.random() * 100}%`;
-                p.style.animationDuration = `${Math.random() * 12 + 8}s`;
-                p.style.animationDelay = `${Math.random() * 6}s`;
-                p.style.background = `radial-gradient(circle, rgba(229,9,20,0.6), transparent)`;
-                container.appendChild(p);
-            }
-        }
-        
-        loadUserData();
-        initParticles();
-        document.body.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
-        updateLanguage();
-        
-        console.log("%c🎬 Cinema4You | 31 Movie - Original + New Animation | Loaded Successfully", "color: #e50914; font-size: 16px; font-weight: bold;");
+        init();
+        // PWA Service Worker registration
+        if('serviceWorker' in navigator){ navigator.serviceWorker.register('/sw.js').catch(e=>console.log("SW registration failed",e)); }
     </script>
 </body>
 </html>
